@@ -1,0 +1,39 @@
+{
+  "name": "acm-vit",
+  "version": "1.0.0",
+  "description": "ACM Vidyalankar Institue Of Technology Official Website",
+  "main": "acm-vit.js",
+  "engines": {
+    "node": "10.5.0",
+    "npm": "6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node acm-vit.js"
+  },
+  "keywords": [
+    "node",
+    "ejs",
+    "express",
+    "mongo",
+    "acm",
+    "vit"
+  ],
+  "author": "Vedant Nandoskar",
+  "license": "MIT",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jquery": "^3.3.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.1.3",
+    "mongoose": "^5.2.9",
+    "owl.carousel": "^2.3.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
+  }
+}

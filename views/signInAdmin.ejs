@@ -1,0 +1,25 @@
+
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+    <div class="container">
+      <div class="jumbotron" style="margin-top: 10%">
+        <h3 class="display-4">Admin Sign In</h3>
+        <hr>
+        <form action="/signinAdmin" method="POST">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input required type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input required type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  <!--************** Include Footer Partials ***************-->
+  <% include /app/views/partials/footer.ejs %>

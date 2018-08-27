@@ -1,0 +1,146 @@
+
+<!-- ===================================================================== -->
+                            <!-- Events Page -->
+<!-- ===================================================================== -->
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+
+  <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+    <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/" style=" margin-left: 16%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+      <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+      <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+      <a class="nav-item nav-link active" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+      <a class="nav-item nav-link" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+      <li class="nav-item dropdown" style="margin-left: 12%">
+        <a class="nav-link dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+          <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+          <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+        </div>
+      </li>
+    </div>
+    <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+      <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+    </a>
+    </div>
+  </nav>
+
+  <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+
+  <div id='particles-js-events'></div>  <!-- DANGER !!!! DO NOT TAMPER WITH THIS LINE-->
+
+  <link rel="stylesheet" href="/stylesheets/events.css">
+  <link rel="stylesheet" href="/stylesheets/imagehoverEvents.css">
+
+
+  <!-- ////////////////////////////Email Us?///////////////////////// -->
+  <div class="jumbotron" id="partialAbout-1" style=" color: white; background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)); margin-bottom: 3% !important; margin-top: 0.5%; border-width: 20px !important; text-align: justify">
+    <div class="container-fluid" style="width: 85%">
+      <h4 class="display-4" data-aos="fade-up">Events</h4>
+      <hr style="width: 5%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%;" data-aos="fade-up">
+      <p data-aos="fade-up" style="line-height: 90px; margin-top: 2%;">
+        <h4 style="margin-left: 1%; line-height: 40px; margin-bottom: 8%" data-aos="fade-up">
+          Take a look at our previous events as well as register for our upcoming events. The events are full of fun and promise enthusiastic learning approaches.
+          These events are conducted by qualified professionals which rich experience in their domains and thus ensure a wholistic and enriching experience.
+        </h4>
+      </p>
+      <h4 class="display-4" data-aos="fade-up">Upcoming Events</h4>
+      <hr style="width: 5%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%; margin-bottom: 4%" data-aos="fade-up">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-in" style="width: 70%; margin-left: 17%">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-aos="fade-up">
+            <figure class="imghvr-blur" style="margin-left: 3%; width: 95%" >
+              <img class="d-block w-100" src="http://talkingtrading.com.au/wp-content/uploads/2015/05/tech1.jpg" alt="Second slide" style="width: 40%; height: 35%">
+              <figcaption>
+                <div class="container">
+                  <a href="#"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item" data-aos="fade-up">
+            <figure class="imghvr-blur" style="margin-left: 3%; width: 95%" >
+              <img class="d-block w-100" src="https://i.amz.mshcdn.com/Hmaq6dTgHIQjiESybHe1MsLBW9I=/fit-in/1440x0/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F319939%2F8fd805d4-b429-4268-884a-f49298a676a2.jpg" alt="First slide" style="width: 40%; height: 35%">
+              <figcaption>
+                <div class="container">
+                  <a href="#"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item" data-aos="fade-up">
+            <figure class="imghvr-blur" style="margin-left: 3%; width: 95%" >
+              <img class="d-block w-100" src="https://static.adweek.com/adweek.com-prod/wp-content/uploads/2018/08/landing-a-job-in-ad-tech1.jpg" alt="Third slide" style="width: 40%; height: 35%">
+              <figcaption>
+                <div class="container">
+                  <a href="#"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- /////////////////////////////////////// Prvious Events ///////////////////////////////// -->
+  <div class="jumbotron" id="partialAbout-2" style=" color: white; background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)); margin-bottom: 0% !important; margin-top: 0%; border-width: 20px !important; text-align: justify">
+    <div class="container-fluid" style="width: 85%">
+      <h4 class="display-4" data-aos="fade-up">Previous Events</h4>
+      <hr style="width: 12%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%;" data-aos="fade-up">
+      <p data-aos="fade-up" style="line-height: 90px; margin-top: 1%;">
+        <h4 style="margin-left: 1%; line-height: 40px; margin-bottom: 8%" data-aos="fade-up">
+          These are the events that were hughly succesful and we had a great response and feedback to these events.
+          This gives us the drive to fulfill our promise of organising such events regularly and instill a sense of exposure and overall development in the minds of those who attend.
+        </h4>
+      </p>
+      <div class="jumbotron shadow-lg rounded" style="background-color: rgba(0, 0, 0, 0.3)" data-aos="fade-up">
+        <div class="nine columns">
+          <div class="coverflow top10 bot10">
+            <a class="prev-arrow"></a>
+            <a class="a-slider" href=""><img src="/images/previous-events/database/dbOne.png" class="coverflow__image"/></a>
+            <a class="a-slider" href=""><img src="/images/previous-events/c-prog/cOne.png" class="coverflow__image"/></a>
+            <a class="a-slider" href=""><img src="/images/previous-events/paradigm/paradigmOne.png" class="coverflow__image"/></a>
+            <a class="a-slider" href=""><img src="/images/previous-events/glow-football/footballOne.png" class="coverflow__image"/></a>
+            <a class="a-slider" href=""><img src="/images/previous-events/paper-write/paperOne.png" class="coverflow__image"/></a>
+            <a class="next-arrow"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ////////////////////Import JS File/////////////////////////// -->
+  <script type="text/javascript" src="/js_scripts/events.js"></script>
+
+  <!--************** Include Footer Partials ***************-->
+  <% include /app/views/partials/footer.ejs %>

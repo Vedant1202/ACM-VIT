@@ -1,0 +1,152 @@
+
+<!-- ===================================================================== -->
+                            <!-- Blogs Page -->
+<!-- ===================================================================== -->
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+
+  <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+    <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/" style=" margin-left: 16%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+      <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+      <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+      <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+      <a class="nav-item nav-link active" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+      <li class="nav-item dropdown" style="margin-left: 12%">
+        <a class="nav-link dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+          <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+          <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+        </div>
+      </li>
+    </div>
+    <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+      <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+    </a>
+    </div>
+  </nav>
+
+  <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+
+  <div id='particles-js-blogs'></div>  <!-- DANGER !!!! DO NOT TAMPER WITH THIS LINE-->
+
+  <!-- ////////////////////////////Email Us?///////////////////////// -->
+  <div class="jumbotron" id="partialBlogs-1" style=" color: white; background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)); margin-bottom: 0% !important; padding-top: 2.5%; margin-top: 0%; border-width: 20px !important; text-align: justify; height: 500% !important;">
+    <div class="container-fluid" style="width: 85%; height: 500% !important">
+      <h4 class="display-4" data-aos="fade-up">Blogs</h4>
+      <hr style="width: 5%; border-color: rgba(255, 255, 255, 0.6); margin-left: 0.5%;" data-aos="fade-up">
+      <p data-aos="fade-up">
+        <h4 style="margin-left: 1%; margin-top: 3%; line-height: 40px;">
+          Read about the blogs that our teams write for you to know about what's happening in the ACM community and also about the most trending and buzzing technologies in the computing world.
+        </h4>
+      </p>
+    </div>
+
+      <div class="container-fluid" style="width: 80%; margin-left: 10%; color: white; margin-top: 4%">
+        <% var limit = 0; %>
+        <% if(blogs.length > 3){ %>
+        <% limit = 3; %>
+        <% } else { %>
+        <% limit = blogs.length %>
+        <% } %>
+        <% for(var i=0; i < limit; i++) { %>
+                <div class="card shadow-lg rounded" style="width: 60%; height: 40%; margin-left: 20%; background-color: rgba(0, 0, 0, 0.4); margin-top: 7%" data-aos="fade-up">
+                  <figure class="imghvr-blur">
+                    <img class="card-img-top shadow rounded" src="<%= blogs[i].image %>" alt="Card image cap" style="width: 100%; height: 100%;">
+                    <figcaption>
+                      <div class="container">
+                        <a href="/blogs/<%= blogs[i]._id %>"><button type="button" class="btn btn-dark btn-lg shadow-lg" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">View full Blog</button></a>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <div class="card-body">
+                    <h1 class="card-title" style="text-align: center"><%= blogs[i].title %></h1>
+                    <hr style="border-color: rgba(255, 255, 255, 0.4); width: 90%">
+                    <p class="card-text"> <h4 style="text-align: justify; margin-left: 5%; margin-right: 5%"><%= blogs[i].gist %></h4> </p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"> <h5 style="text-align: right ; margin-bottom: 2%">By : <%= blogs[i].author %></h5></small>
+                  </div>
+                  <% if(currentAdmin) { %>
+                  <form action="/blogs/<%= blogs[i]._id %>?_method=DELETE" method="POST">
+                    <input type="submit" class="btn btn-danger" style="margin-bottom: 3px;" value="Delete">
+                  </form>
+                  <% } %>
+                </div>
+        <% }; %>
+        <!-- =================================== Collapse to view more==============================================   -->
+        <div class="collapse" id="collapseExample">
+
+          <% for(var i=3; i < blogs.length; i++) { %>
+            <div class="card shadow-lg rounded" style="width: 60%; height: 40%; margin-left: 20%; background-color: rgba(0, 0, 0, 0.4); margin-top: 7%" data-aos="fade-up">
+              <figure class="imghvr-blur">
+                <img class="card-img-top shadow rounded" src="<%= blogs[i].image %>" alt="Card image cap" style="width: 100%; height: 100%;">
+                <figcaption>
+                  <div class="container">
+                    <a href="/blogs/<%= blogs[i]._id %>"><button type="button" class="btn btn-dark btn-lg shadow-lg" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);">View full Blog</button></a>
+                  </div>
+                </figcaption>
+              </figure>
+              <div class="card-body">
+                <h1 class="card-title" style="text-align: center"><%= blogs[i].title %></h1>
+                <hr style="border-color: rgba(255, 255, 255, 0.4); width: 90%">
+                <p class="card-text"> <h4 style="text-align: justify; margin-left: 5%; margin-right: 5%"><%= blogs[i].gist %></h4> </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"> <h5 style="margin-left: 75%">By : <%= blogs[i].author %></h5></small>
+              </div>
+              <form action="/blogs/<%= blogs[i]._id %>?_method=DELETE" method="POST">
+                <input type="submit" class="btn btn-link" style="color: red !important; margin-bottom: 3px;" value="Delete">
+              </form>
+            </div>
+            <% }; %>
+          </div>
+        <div class="container-fluid"; style="width: 70%;">
+            <a class="btn btn-dark btn-lg shadow but-more"  id="toggle" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="margin-left: 100%; margin-top: 6%" data-aos="fade-up">
+              <!-- Meant to be left blank -->
+              View More
+            </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- ============================== Collapse Ends ==================================================== -->
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+      $("#toggle").text("View more")
+      $("#toggle").click(function() {
+        var elem = $("#toggle").text();
+        if (elem == "View more") {
+          //Stuff to do when btn is in the read more state
+          $("#toggle").text("View less");
+          // $("#text").slideDown();
+        } else {
+          //Stuff to do when btn is in the read less state
+          $("#toggle").text("View more");
+          // $("#text").slideUp();
+        }
+      });
+    });
+
+    </script>
+
+  <!-- ////////////////////Import JS File/////////////////////////// -->
+  <script type="text/javascript" src="/js_scripts/blogs.js"></script>
+
+<!--************** Include Footer Partials ***************-->
+<% include /app/views/partials/footer.ejs %>

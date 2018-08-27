@@ -1,0 +1,418 @@
+<!-- ===================================================================== -->
+                            <!-- Landing Page -->
+<!-- ===================================================================== -->
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+  <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+    <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/" style=" margin-left: 16%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+      <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+      <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+      <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+      <a class="nav-item nav-link" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+      <li class="nav-item dropdown" style="margin-left: 12%">
+        <a class="nav-link dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+          <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+          <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+        </div>
+      </li>
+    </div>
+    <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+      <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+    </a>
+    </div>
+  </nav>
+
+  <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+  <div id='particles-js-home' class="particles-js-home homebase"></div>  <!-- DANGER !!!! DO NOT TAMPER WITH THIS LINE-->
+
+<!-- ////////////////////////////////////////////////////////////////////////// Typewriter effect ////////////////////////////////////////////////////////////////////////-->
+
+  <div class="container" style="width: 90%; color: white; border-color: white; margin-top: 16%; text-align: center" >
+    <h1 class="element" style="display: inline">
+      <!-- Supposed to be left blank.... DO NOT TOUCH -->
+    </h1>
+  </div>
+<!-- ///////////// Down Arrow //////////////////////////// -->
+<div class="arrow bounce" style=" padding-top: 8%; margin-bottom: 2%">
+  <button class="fa fa-angle-double-down fa-4x btn btn-dark" disabled style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
+</div>
+
+<!-- //////////////////////////////////////////////////////////////////////  About Us Div ////////////////////////////////////////////////////////////////////////////////-->
+
+  <div class="jumbotron" id="partialHome-1" style=" color: white; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 3% !important; margin-top: 0%; text-align: justify" data-aos="fade-up">
+    <div class="container-fluid" style="width: 85%">
+      <h4 class="display-4" data-aos="fade-up">About ACM</h4>
+      <hr style="width: 10%; border-color: rgba(255, 255, 255, 0.6); margin-left:0px;" data-aos="fade-up">
+      <p style="width: 60%; margin-top: 20px; line-height: 28px;">
+        <span style="font-size: 20px !important" data-aos="fade-up">
+          ACM brings together computing educators, researchers, and professionals to inspire dialogue, share resources, and address the field's challenges.
+          As the world’s largest computing society, ACM strengthens the profession's collective voice through strong leadership, promotion of the highest standards, and recognition of technical excellence.
+          ACM supports the professional growth of its members by providing opportunities for life‐long learning, career development, and professional networking.
+        </span>
+      </p>
+      <p style="width: 60%; margin-top: 20px; line-height: 28px;">
+        <span  style="font-size: 20px !important" data-aos="fade-up">
+          We at ACM-VIT strive to work together towards these goals keeping in mind the principles on which ACM was founded.
+        </span>
+      </p>
+    </div>
+  </div>
+
+
+<!-- ////////////////////////////////////////////////////////////////////// Landing Carousel Page ///////////////////////////////////////////////////////////////////////////// -->
+  <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.1); margin-bottom: 3%">
+    <div class="container-fluid" style="width: 85%">
+      <p>
+        <h1 class="display-4" style="color: white; margin-left: 5%; padding-top: 20px;" data-aos="fade-up">Highlights</h1>
+        <hr style="border-color: white; width: 10%; float: left; margin-left: 5%" data-aos="fade-up">
+      </p>
+      <p>
+        <h3 style="color: white; float: left; margin-left: 5%; margin-bottom: 1.5%" data-aos="fade-up">See the highlights of some of our most amazing events in the past year. <i> Excited yet?</i> </h3>
+      </p>
+      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-interval='3000' data-ride="carousel"style="width: 75% !important; padding-bottom: 20px; padding-top: 0%; margin-top: 0%; margin-left: 13%" data-aos="fade-up">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+          <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active rounded shadow-lg">
+            <img class="d-block w-100" src="https://isegenesis.files.wordpress.com/2015/03/coding-keyboard.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="container-fluid">
+                <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.02))">
+                  <h1>This is just a text line.</h1>
+                  <p>This is just a text line.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item rounded shadow-lg">
+            <img class="d-block w-100" src="https://d1p42fqrbwqdsw.cloudfront.net/campaigns/background_images/000/063/303/web/facebook_cover_photo.jpg?1507845706" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="container-fluid">
+                <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.02))">
+                  <h1>This is just a text line.</h1>
+                  <p>This is just a text line.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item rounded shadow-lg">
+            <img class="d-block w-100" src="https://technicalustad.com/wp-content/uploads/2018/08/Web-designing.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="container-fluid">
+                <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.02))">
+                  <h1>This is just a text line.</h1>
+                  <p>This is just a text line.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ////////////////////////////////////////////////////////////////////////////// TEAM ////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <div class="jumbotron" id="team" style=" color: white; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 0% !important; margin-top: 0; border-width: 20px !important; text-align: justify">
+      <div class="container-fluid" style="width: 85%">
+        <h4 class="display-4" data-aos="fade-up">The Team</h4>
+        <hr style="width: 10%; border-color: rgba(255, 255, 255, 0.6); margin-left:0px;" data-aos="fade-up">
+        <p style=" margin-top: 20px; line-height: 28px; margin-bottom: 60px;" data-aos="fade-up">
+          <span style="font-size: 24px !important" data-aos="fade-up">
+            Meet the team of ACM-VIT which never fails to bring the hottest brewing technologies to your table!
+          </span>
+        </p>
+        <p>
+          <!-- //////////////////////////////////////////////////////// Team members ///////////////////////////////////////////////// -->
+          <!-- ////////Ms. Bhanu Tekwani/////////////// -->
+          <div class="row">
+            <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 40%" data-aos="fade-up">
+              <img class="card-img-top rounded" src="/images/core-mem/bhanut.png" alt="Card image cap" style="height: 60%">
+              <div class="card-body">
+                <h4 class="card-title" style="color: white; text-align: center">Ms. Bhanu Tekwani</h4>
+                <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Convenor</h5> </p>
+                <a href="#" disabled> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a>
+                <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                  <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%; ">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <h6>bhanu.tekwani@vit.edu.in</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ////////Sanyam, Pravin, Rucha/////////////// -->
+          <div class="row" style="margin-top: 6%; width: 100%">
+            <div class="card-deck" style="width: 100%">
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 10%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/sanyans.png" alt="Card image cap" style="height: 65%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Sanyam Sharma</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">General Secretary</h5> </p>
+                  <!-- <a href="#" disabled> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                      <h6>sanyamsharma252@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/pravink.png" alt="Card image cap" style="height: 65%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Pravin Kharat</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Chairperson</h5> </p>
+                  <a href="#team" onclick="window.open('https://in.linkedin.com/in/pravin-kharat-237736156', '_blank')"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a>
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                      <h6>pravin.kharat@vit.edu.in</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/ruchaw.png" alt="Card image cap" style="height: 65%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Rucha Walke</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Co-Chairperson</h5> </p>
+                  <!-- <a href="#" disabled> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                      <h6>ruchawalke140898@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //////////////// Sandesh, Shubham, Vedant -->
+          <div class="row" style="margin-top: 6%; width: 100%">
+            <div class="card-deck" style="width: 100%">
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 10%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/sandesha.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Sandesh Arote</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Research & Development Head</h5> </p>
+                  <!-- <a href="#" disabled> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
+                      <h6>sandesharote21@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/shubhama.jpg" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Shubham Ambavane</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Research & Development Head</h5> </p>
+                  <!-- <a href="#"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink5">
+                      <h6>shubhamdambavane@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/vedantn.jpg" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Vedant Nandoskar</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Webmaster</h5> </p>
+                  <a href="#" onclick="window.open('https://github.com/Vedant1202', '_blank')"> <img src="/images/share-icons/github.png" alt="" style="width: 16%; height: 16%; margin-left: 28%"> </a>
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink6">
+                      <h6>vedant.nandoskar@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ///////////////////Umraan, Saloni, Tanvi -->
+          <div class="row" style="margin-top: 6%; width: 100%">
+            <div class="card-deck" style="width: 100%">
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 10%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/umraans.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Umraan Shaikh</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Treasurer</h5> </p>
+                  <!-- <a href="#"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink7">
+                      <h6>umraans@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/salonia.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Saloni Apte</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Publicity Head</h5> </p>
+                  <!-- <a href="#"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink8">
+                      <h6>saloniapte29@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/tanvis.jpg" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Tanvi Sayyed</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Co-Publicity Head</h5> </p>
+                  <!-- <a href="#"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink9">
+                      <h6>tanvisayyed02@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ////////////////////////////Anuj, Tanay, Shravan ///////////////////////////-->
+          <div class="row" style="margin-top: 6%; width: 100%">
+            <div class="card-deck" style="width: 100%">
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 10%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/anujy.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Anuj Yadav</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Events Head</h5> </p>
+                  <a href="#team" onclick="window.open('https://www.linkedin.com/in/anuj-yadav-38ab79139/', '_blank')"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a>
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink10">
+                      <h6>anujyadav24213@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/tanays.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Tanay Shah</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Documentation Head</h5> </p>
+                  <a href="#team" onclick="window.open('https://www.linkedin.com/in/tanay-shah-95235314b/', '_blank')"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a>
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink11">
+                      <h6>tanayshah@live.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/shravank.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Shravan Kegade</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Photography Head</h5></p>
+                  <!-- <a href="#"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink12">
+                      <h6>kegadeshravan@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //////////////////////////// Rohan, Suraj ///////////////////////////-->
+          <div class="row" style="margin-top: 6%; width: 65%; margin-left: 18%">
+            <div class="card-deck" style="width: 100%">
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 10%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/rohank.png" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Rohan Kokkula</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Creatives Head</h5> </p>
+                  <a href="#" onclick="window.open('https://github.com/rohan0301', '_blank')"> <img src="/images/share-icons/github.png" alt="" style="width: 14%; height: 14%; margin-left: 12%"> </a>
+                  <a href="#team" onclick="window.open('https://www.linkedin.com/in/rohan-kokkula-0a8b72137/', '_blank')"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 10%"> </a>
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink13" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 0%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink13">
+                      <h6>rohankokkula01@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card" style="width: 16rem; background-color: rgba(0, 0, 0, 0.25); margin-left: 5%" data-aos="fade-up">
+                <img class="card-img-top rounded" src="/images/core-mem/surajk.jpg" alt="Card image cap" style="height: 60%">
+                <div class="card-body">
+                  <h4 class="card-title" style="color: white; text-align: center">Suraj Kewat</h4>
+                  <p class="card-text" style="color: white;"> <h5 style=" text-align: center">Creatives Head</h5> </p>
+                  <!-- <a href="#"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a> -->
+                  <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink14" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" margin-left: 2%; width: 40%; padding: 0px; border: 0; color: rgb(180, 180, 180);">
+                    <img src="/images/share-icons/gmail.png" alt="" style="width: 45%; height: 45%; margin-left: 100%">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink14">
+                      <h6>surajkewat216@gmail.com</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+        ////////////////////////// Typed.js Initialisation //////////////////////////
+
+        var typed = new Typed(".element", {
+          strings: ['', 'The Official Website of ACM student chapter of Vidyalankar Institute of Technology', 'A place where knowledge sharing is the norm', 'A place where everyone walks together, learns together'],
+          typeSpeed: 0,
+          backSpeed: 0,
+          // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+          stringsElement: null,
+          smartBackspace: true, // Default value
+          backDelay: 1200,
+          loop: true,
+          loopCount: Infinity,
+          // startDelay: 100,
+        });
+        ///////////////////////////// Typed.js Ends //////////////////////////////////
+
+
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+             // some code..
+             $('homebase').removeClass('.particles-js-home');
+             $('homebase').addClass('.particles-js-home-mob');
+            }
+
+    </script>
+
+
+  <!--************** Include Footer Partials ***************-->
+  <% include /app/views/partials/footer.ejs %>

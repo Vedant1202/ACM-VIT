@@ -1,0 +1,96 @@
+
+<!-- ===================================================================== -->
+                            <!-- Full BLog Display Page -->
+<!-- ===================================================================== -->
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+
+    <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+      <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+        <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/" style=" margin-left: 16%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+        <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+        <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+        <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+        <a class="nav-item nav-link active" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+        <li class="nav-item dropdown" style="margin-left: 12%">
+          <a class="nav-link dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+            <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+            <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+          </div>
+        </li>
+      </div>
+      <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+        <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+      </a>
+      </div>
+    </nav>
+
+    <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+
+
+  <!-- <div id='particles-js-contactUs'></div>  -->
+  <!-- DANGER !!!! DO NOT TAMPER WITH THIS LINE-->
+
+  <div class="container">
+    <div class="jumbotron" style="margin-top: 10%; background-color: rgba(0 ,0 ,0, 0.2); color: white">
+      <p align="center">
+        <img src="<%= fullBlog.image %>" alt="" style="width: 50%; height: 50%;">
+      </p>
+      <div class="container" style="width: 90%">
+        <p>
+          <h1 style="margin-top: 8%"><%= fullBlog.title %></h1>
+          <hr style="border-color: white; width: 30%; margin-left: 0; margin-top: 4%">
+        </p>
+        <p style="margin-top: 6%; text-align: justify">
+          <h4 style="line-height: 40px; text-align: justify">      <%= fullBlog.bodyOne %></h4>
+        </p>
+        <p style="margin-top: 4%; text-align: justify">
+          <h4 style="line-height: 40px; text-align: justify">      <%= fullBlog.bodyTwo %></h4>
+        </p>
+        <p style="margin-top: 4%; text-align: justify">
+          <h4 style="line-height: 40px; text-align: justify">      <%= fullBlog.bodyThree %></h4>
+        </p>
+        <p>
+          <h5 style="color: rgb(170, 170, 170)"><a href="#" class="btn btn-light" onclick="window.open('<%= fullBlog.links %>', '_blank')">View external source</a></h5>
+        </p>
+        <hr style="border-color: rgb(140, 140, 140); margin-top: 6%">
+        <p style="margin-top: 6%">
+          <h5 style="color: rgb(170, 170, 170)"> Written by - <%= fullBlog.author %></h5>
+        </p>
+        <p>
+          <h6 style="color: rgb(170, 170, 170)"><%= fullBlog.posted %></h6>
+        </p>
+        <a href="/blogs" class="btn btn-info" style="margin-top: 4%">Go Back to Blogs</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".sticky-top");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      $nav.toggleClass('shadow-lg', $(this).scrollTop() > $nav.height());
+    });
+  });
+  </script>
+
+  <!-- ////////////////////Import JS File/////////////////////////// -->
+  <!-- <script type="text/javascript" src="/partials/js_scripts/contactUs.js"></script> -->
+
+  <!--************** Include Footer Partials ***************-->
+  <% include /app/views/partials/footer.ejs %>

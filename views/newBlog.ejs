@@ -1,0 +1,89 @@
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+
+    <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+      <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+        <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/" style=" margin-left: 16%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+        <a class="nav-item nav-link active" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+        <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+        <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+        <a class="nav-item nav-link" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+        <li class="nav-item dropdown" style="margin-left: 12%">
+          <a class="nav-link dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+            <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+            <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+          </div>
+        </li>
+      </div>
+      <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+        <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+      </a>
+      </div>
+    </nav>
+
+    <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+
+<div class="container">
+  <div class="jumbotron" style="margin-top: 15%">
+    <h3 class="display-4">Write a new blog</h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <form action="/blogs/new" method="POST">
+      <div class="form-group">
+        <label for="exampleInputTitle1">Title</label>
+        <input required type="text" class="form-control" name="blog[title]" id="exampleInputTitle1" aria-describedby="TitleHelp" placeholder="Enter the title of your blog.">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputAuthor1">Author</label>
+        <input required type="text" class="form-control" name="blog[author]" id="exampleInputAuthor1" aria-describedby="authorHelp" placeholder="Enter author's name.">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputImage1">Image</label>
+        <input type="text" class="form-control" name="blog[image]" id="exampleInputPassword1" placeholder="Enter the Google Photos Image URL here (Ensure link sharing is public).">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea required class="form-control" name="blog[gist]" id="exampleFormControlTextarea1" rows="3" placeholder="Give a short description of the blog in 2-3 lines."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Paragraph-1</label>
+        <textarea required class="form-control" name="blog[bodyOne]" id="exampleFormControlTextarea2" rows="5" placeholder="Enter your text here (required)."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Paragraph-2</label>
+        <textarea class="form-control" name="blog[bodyTwo]" id="exampleFormControlTextarea3" rows="5" placeholder="Enter your text here."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Paragraph-3</label>
+        <textarea class="form-control" name="blog[bodyThree]" id="exampleFormControlTextarea4" rows="5" placeholder="Enter your text here."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">External Link</label>
+        <input type="text" class="form-control" name="blog[links]" id="exampleInputLink1" aria-describedby="linkHelp" placeholder="Paste an external link (only one).">
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top: 4%">Submit</button>
+    </form>
+    <a class="btn btn-danger" href="/logout" style="margin-top: 4%">Log Out?</a>
+  </div>
+</div>
+
+
+    <!--************** Include Footer Partials ***************-->
+    <% include /app/views/partials/footer.ejs %>

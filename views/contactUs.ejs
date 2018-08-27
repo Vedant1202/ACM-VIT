@@ -1,0 +1,155 @@
+
+<!-- ===================================================================== -->
+                            <!-- Contact Us Page -->
+<!-- ===================================================================== -->
+
+  <!--************** Include Header Partials ***************-->
+  <% include /app/views/partials/header.ejs %>
+
+  <!-- ========================== Google Maps Link =========================== -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVcUVEH2xpI5hDRSM4lh9RtjbC6bfq53Y&callback=initMap"
+  async defer></script>
+
+
+  <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+    <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/" style=" margin-left: 16%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+      <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+      <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+      <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+      <a class="nav-item nav-link" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+      <li class="nav-item dropdown" style="margin-left: 12%">
+        <a class="nav-link active dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+          <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+          <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+        </div>
+      </li>
+    </div>
+    <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+      <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+    </a>
+    </div>
+  </nav>
+
+  <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+
+  <div id='particles-js-contactUs'></div>  <!-- DANGER !!!! DO NOT TAMPER WITH THIS LINE-->
+
+  <!-- ////////////////////////////Email Us?///////////////////////// -->
+  <div class="jumbotron" id="query" style=" color: white; background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)); margin-bottom: 4% !important; margin-top: 0%; border-width: 20px !important; text-align: justify; padding-top: 5%">
+    <div class="container-fluid" style="width: 85%">
+      <h4 class="display-4" data-aos="fade-up">Contact Us</h4>
+      <hr style="width: 10%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%;" data-aos="fade-up">
+      <p data-aos="fade-up">
+        <h4 style="margin-left: 1%" data-aos="fade-up">Drop down a query, a suggestion or just a Hi, we cherish every interaction.</h4>
+        <h4 style="margin-left: 1%" data-aos="fade-up">We'll reach out to you on your email as soon as possible!</h4>
+      </p>
+      <p>
+        <img src="/images/contactUs/contact-mail.png" alt="" class="rounded" style="width: 30%; height: 30%; float: right; margin-left: 3%; margin-top: 2%" data-aos="fade-up">
+        <!-- <img src="/images/logo/acm-logo-noText.png" alt="" class="rounded shadow-lg img-thumbnail" style="width: 15%; height: 15% !important; float: right; margin-top: 5%"> -->
+        <p style="margin-top: 0%; line-height: 28px; margin-bottom: 2%">
+          <div class="col-7">
+            <p style="width: 60%; line-height: 28px; margin-bottom: 2%">
+              <span style="font-size: 20px !important">
+                <form class="commentForm" action="/contactUs" method="POST" data-aos="fade-up">
+                  <div class="form-group" style="margin-top: 2%">
+                    <label for="exampleInputEmail1"> <h5 data-aos="fade-up">Name</h5> </label>
+                    <input required type="text" class="form-control" name="queryMail[name]" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter your name" data-aos="fade-up">
+                  </div>
+                  <div class="form-group" style="margin-top: 2%">
+                    <label for="exampleInputEmail1"> <h5 data-aos="fade-up">Email address</h5> </label>
+                    <input required type="email" class="form-control" name="queryMail[email]" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" data-aos="fade-up">
+                    <small id="emailHelp" class="form-text text-muted"> <h6>Don't worry, we'll never share your email with anyone else.</h6> </small>
+                  </div>
+                  <div class="form-group" style="margin-top: 2%">
+                    <label for="exampleFormControlTextarea1"> <h5>Message</h5> </label>
+                    <textarea required class="form-control" name="queryMail[body]" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your queries, comments, suggestions or messages"></textarea>
+                    <button type="submit" class="btn btn-primary btn-lg shadow rounded" style="margin-top: 2%">Submit</button>
+                  </div>
+                </form>
+              </span>
+            </p>
+          </div>
+            <h2></h2>
+            <p style="width: 60%; line-height: 28px;">
+              <span style="font-size: 20px !important">
+                <!-- Add Content Later -->
+            </span>
+            </p>
+        </p>
+      </p>
+    </div>
+  </div>
+
+  <!-- ////////////////////////////Other contacts, maps, etc///////////////////////// -->
+  <div class="jumbotron" id="locate" style=" color: white; background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)); margin-bottom: 0% !important; border-width: 20px !important; text-align: justify">
+    <div class="container-fluid" style="width: 85%">
+      <h4 class="display-4" data-aos="fade-up">Locate us</h4>
+      <hr style="width: 7%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%;" data-aos="fade-up">
+      <p>
+        <div id="map" data-aos="fade-up" style="width: 70%; height: 65%; position: absolute; margin-top: 2%;  margin-left: 2%;"></div>
+      </p>
+      <div id="socialMedia" style="margin-top: 70%;">
+        <p data-aos="fade-up" style="padding-top: 5%">
+          <h2 style="margin-left: 1%" data-aos="fade-up">We're on social media on the following platforms</h2>
+          <hr style="border-color: white; margin-left: 1%; width: 10%" data-aos="fade-up">
+        </p>
+        <p style="margin-top: 4%" data-aos="fade-up">
+          <a href="#" onclick="window.open('https://www.instagram.com/acm_vit/', '_blank')"><img src="/images/share-icons/instagram-color.png" alt="" data-toggle="tooltip" data-placement="top" title="Instagram" style="width: 8%; height: 8%"></a>
+          <a href="#" onclick="window.open('https://www.facebook.com/acmvitchapter/?hc_ref=ARQ2reAqo5XYo--nSYnOgn3p6z-7u3waZlEKUY5_fp2FKAnGmBPGCiHyg67KArKn8aM&__xts__[0]=68.ARDPw9sNWPUJeyhQONqCDrWaFDZPaph2AEXOyKxaNLNreL_BPL0qre2WvMhkA8ZvMNkMzG2If-vb2EKfNJqa4ipa7SoN1rH4RFuOagNCbTZTRaL3Cj7BlJvf9BDTGCYynjfZ2zg&__tn__=kC-R', '_blank')"><img src="/images/share-icons/fb-color.png" alt="" data-toggle="tooltip" data-placement="top" title="Facebook" style="width: 8%; height: 8%; margin-left: 6%"></a>
+          <a href="#"><img src="/images/share-icons/linkedin-color.png" alt="" data-toggle="tooltip" data-placement="top" title="LinkedIn" style="width: 11%; height: 11%; margin-left: 4%"></a>
+        </p>
+        <p style="margin-top: 8%">
+          <h2 style="margin-left: 1%" data-aos="fade-up">Or get in touch with us by</h2>
+          <hr style="border-color: white; margin-left: 1%; width: 10%" data-aos="fade-up">
+        </p>
+        <p style="margin-top: 4%" data-aos="fade-up">
+          <ul>
+            <li>
+              <h5 style="margin-left: 2%" data-aos="fade-up"> <strong style="margin-right: 7%" data-aos="fade-up">Address :</strong> VIT Campus, Vidyalankar College Road, Wadala (E) Mumbai, MH 400037 </h5>
+            </li>
+            <li style="margin-top: 2%">
+              <h5 style="margin-left: 2%" data-aos="fade-up"> <strong style="margin-right: 5%" data-aos="fade-up">Contact No :</strong> +91 8976352943 </h5>
+            </li>
+            <li style="margin-top: 2%">
+              <h5 style="margin-left: 2%" data-aos="fade-up"> <strong style="margin-right: 9%" data-aos="fade-up">Email :</strong> pravin.kharat@vit.edu.in</h5>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 19.0215, lng: 72.871},
+        zoom: 18
+      });
+
+      //Set up Marker
+      var marker = new google.maps.Marker({
+        position: {lat: 19.0215, lng: 72.871},
+        map: map,
+      });
+    }
+  </script>
+
+  <!-- ////////////////////Import JS File/////////////////////////// -->
+  <script type="text/javascript" src="/js_scripts/contactUs.js"></script>
+
+  <!--************** Include Footer Partials ***************-->
+  <% include /app/views/partials/footer.ejs %>
