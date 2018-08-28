@@ -41,8 +41,6 @@
   <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
 
 
-  <div id='particles-js-blogs'></div>  <!-- DANGER !!!! DO NOT TAMPER WITH THIS LINE-->
-
   <!-- ////////////////////////////Email Us?///////////////////////// -->
   <div class="jumbotron" id="partialBlogs-1" style=" color: white; background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)); margin-bottom: 0% !important; padding-top: 2.5%; margin-top: 0%; border-width: 20px !important; text-align: justify; height: 500% !important;">
     <div class="container-fluid" style="width: 85%; height: 500% !important">
@@ -108,14 +106,16 @@
               <div class="card-footer">
                 <small class="text-muted"> <h5 style="margin-left: 75%">By : <%= blogs[i].author %></h5></small>
               </div>
-              <form action="/blogs/<%= blogs[i]._id %>?_method=DELETE" method="POST">
-                <input type="submit" class="btn btn-link" style="color: red !important; margin-bottom: 3px;" value="Delete">
-              </form>
+              <% if(currentAdmin) { %>
+                <form action="/blogs/<%= blogs[i]._id %>?_method=DELETE" method="POST">
+                  <input type="submit" class="btn btn-link" style="color: red !important; margin-bottom: 3px;" value="Delete">
+                </form>
+              <% } %>
             </div>
             <% }; %>
-          </div>
+        </div>
         <div class="container-fluid"; style="width: 70%;">
-            <a class="btn btn-dark btn-lg shadow but-more"  id="toggle" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="margin-left: 100%; margin-top: 6%" data-aos="fade-up">
+            <a class="btn btn-light btn-lg shadow but-more"  id="toggle" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="margin-left: 100%; margin-top: 6%" data-aos="fade-up">
               <!-- Meant to be left blank -->
               View More
             </a>

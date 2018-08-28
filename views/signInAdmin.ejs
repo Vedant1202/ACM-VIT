@@ -3,6 +3,41 @@
   <!--************** Include Header Partials ***************-->
   <% include /app/views/partials/header.ejs %>
 
+
+    <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
+
+    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+      <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
+        <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/" style=" margin-left: 14%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+        <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
+        <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+        <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
+        <a class="nav-item nav-link" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
+        <li class="nav-item dropdown" style="margin-left: 12%">
+          <a class="nav-link dropdown-toggle" href="/contactUs" id="contactDropdown" data-toggle="dropdown" aria-expanded="false"><span style="font-size: 1.7em !important">Contact</span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/contactUs#query">Have a Query?</a>
+            <a class="dropdown-item" href="/contactUs#locate">Locate us</a>
+            <a class="dropdown-item" href="/contactUs#socialMedia">Social Media</a>
+          </div>
+        </li>
+      </div>
+      <a class="navbar-brand" href="#" onclick="window.open('https://www.acm.org/', '_blank')" style="float: right; margin-left: 12%">
+        <img class="float-right" src="/images/logo/acm.png" style="height: 37%; width:37%;">
+      </a>
+      </div>
+    </nav>
+
+    <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
+
+
     <div class="container">
       <div class="jumbotron" style="margin-top: 10%">
         <h3 class="display-4">Admin Sign In</h3>
