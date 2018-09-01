@@ -17,6 +17,13 @@
   left: 0;
 }
 
+.hovereffect .scaled {
+  transform: scale(0.65) translateY(-35px);
+  /* height: auto !important; */
+  /* width: auto !important; */
+  overflow: visible !important;
+}
+
 .hovereffect img.profImg {
   display: block;
   position: relative;
