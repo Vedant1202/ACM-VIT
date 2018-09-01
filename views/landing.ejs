@@ -282,7 +282,7 @@
                   <div class="overlay rounded-circle">
                      <h2 class="blurHover" style="margin-top: 20%">Tanay Shah</h2>
                      <h6 class="blurHover">Documentation Head</h6>
-                     <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/tanay-shah-95235314b/', '_blank')"> <img src="/images/share-icons/linkedin.png" alt="" style="width: 18%; height: 18%; margin-left: 28%"> </a>
+                     <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/tanay-shah-95235314b/', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"> </a>
                   </div>
               </div>
             </div>
@@ -344,12 +344,19 @@
         });
         ///////////////////////////// Typed.js Ends //////////////////////////////////
 
+        //////////////////////////////// Handle Responsiveness for circle team member hover effect /////////////////////////////////
 
-            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-             // some code..
-             $('homebase').removeClass('.particles-js-home');
-             $('homebase').addClass('.particles-js-home-mob');
-            }
+            if (('ontouchstart' in window) ||     // Advanced test for touch events
+            (window.DocumentTouch && document instanceof DocumentTouch) ||
+            ((hash['touch'] && hash['touch'].offsetTop) === 9)) {
+
+              $(".overlay").hover(function() {
+                $(".overlay").removeClass("scaled");
+                $(this).addClass("scaled");
+              });
+            };
+
+      /////////////////////////////////////// Hover ends /////////////////////////////////////////////
 
     </script>
 
