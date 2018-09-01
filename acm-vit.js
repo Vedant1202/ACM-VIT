@@ -71,6 +71,11 @@ app.get('/aboutUs', function (req, res) {
   res.render('aboutUs');
 });
 
+//Cirle Pics Page
+app.get('/pics', function (req, res) {
+  res.render('circlePics');
+});
+
 //Events page
 app.get('/events', function (req, res) {
   res.render('events');
