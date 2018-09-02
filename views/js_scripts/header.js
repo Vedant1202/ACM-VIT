@@ -133,25 +133,61 @@
     ///////////////////////////// AOS Ends //////////////////////////////////
 
 
-    // $('.team').click(function(){
-    //     var $href = $(this).attr('href');
-    //     var $anchor = $($href).offset();
-    //     window.scrollTo($anchor.left,$anchor.top);
-    //     // $('body').animate({ scrollTop: $anchor.top });
-    //     return false;
-    // });
-    // $(function () {
-    //   setNavigation();
-    // });
-    // function setNavigation() {
-    //   var path = window.location.pathname;
-    //   path = path.replace(/\/$/, "");
-    //
-    //   $('.nav a').each(function () {
-    //     var href = $(this).attr('href');
-    //     if(path.substring(0, href.length)==href){
-    //       $(this).closest('.nav-link').addClass('active');
-    //       $('.nav-link').removeClass('active');
-    //     };
-    //   });
-    // };
+        // GO DOWN
+        $(".scrolldown-aboutHome").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#partialHome-1").offset().top
+            }, 1000);
+        });
+        $(".scrolldown-carouselHome").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#partialHome-2").offset().top
+            }, 1000);
+        });
+        $(".scrolldown-teamHome").click(function() {
+          $('html, body').animate({
+            scrollTop: $("#team").offset().top
+          }, 1000);
+        });
+        $(".scrolldown-whoAbout").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#partialAbout-2").offset().top
+            }, 1000);
+        });
+        $(".scrolldown-aimAbout").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#partialAbout-3").offset().top
+            }, 1000);
+        });
+        $(".scrolldown-prevEvents").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#partialEvents-2").offset().top
+            }, 1000);
+        });
+
+
+        // WITH LINK TO TEAM
+
+        $(window).on("load", function() {
+          $(".go").click(function(e) {
+            e.preventDefault();
+            scrollToElement($(this).attr("href"), 1000);
+          });
+
+          var scrollToElement = function(el, ms) {
+            var speed = ms ? ms : 600;
+            $("html,body").animate(
+              {
+                scrollTop: $(el).offset().top
+              },
+              speed
+            );
+          };
+        });
+
+        // GO TO TOP
+
+        $(".scrollup").click(function() {
+          $("html, body").animate({ scrollTop: 0 }, 800);
+          return false;
+        });

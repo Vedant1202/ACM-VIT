@@ -1067,3 +1067,14 @@
   -webkit-transition-delay: 0.21s;
   transition-delay: 0.21s;
 }
+
+
+  &:hover {
+    opacity: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+  @media (max-width: 767px) {
+    transform: scale(0.6);
+  }

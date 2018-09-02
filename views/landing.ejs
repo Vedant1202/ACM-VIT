@@ -1,3 +1,25 @@
+<!--
+    Official Website of ACM Student Chapter of Vidyalankar Institute of Technology
+    Copyright (C) 2018  VEDANT NANDOSKAR
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    Contact: vedant.nandoskar@gmail.com
+    Source Code: https://github.com/Vedant1202/ACM-VIT
+ -->
+
+
 <!-- ===================================================================== -->
                             <!-- Landing Page -->
 <!-- ===================================================================== -->
@@ -7,18 +29,18 @@
 
   <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
 
-  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" id="home" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
     <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 10%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
-      <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 30%; width:30%; margin-top: 0px !important; margin-bottom: 0px !important;">
+      <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 55px; width: 120px; margin-top: 0px !important; margin-bottom: 0px !important;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/" style=" margin-left: 14%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+      <a class="nav-item nav-link active scrollup" href="#" style=" margin-left: 14%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
       <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
-      <a class="nav-item nav-link team" href="/#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
+      <a class="nav-item nav-link team go" href="#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
       <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
       <a class="nav-item nav-link" href="/blogs" style="margin-left: 12%;"><span style="font-size: 1.7em !important">Blog</span></a>
       <li class="nav-item dropdown" style="margin-left: 12%">
@@ -53,7 +75,7 @@
   </div>
 <!-- ///////////// Down Arrow //////////////////////////// -->
 <div class="arrow bounce" style=" padding-top: 8%; margin-bottom: 2%">
-  <button class="fa fa-angle-double-down fa-4x btn btn-dark" disabled style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
+  <button class="fa fa-angle-double-down fa-4x btn btn-dark scrolldown-aboutHome" style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
 </div>
 
 <!-- //////////////////////////////////////////////////////////////////////  About Us Div ////////////////////////////////////////////////////////////////////////////////-->
@@ -75,11 +97,15 @@
         </span>
       </p>
     </div>
+    <!-- ///////////// Down Arrow //////////////////////////// -->
+    <div class="arrow bounce" style=" padding-top: 2%;">
+      <button class="fa fa-angle-double-down fa-4x btn btn-dark scrolldown-carouselHome" style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
+    </div>
   </div>
 
 
 <!-- ////////////////////////////////////////////////////////////////////// Landing Carousel Page ///////////////////////////////////////////////////////////////////////////// -->
-  <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.1); margin-bottom: 3%">
+  <div class="jumbotron" id="partialHome-2" style="background-color: rgba(0, 0, 0, 0.1); margin-bottom: 3%">
     <div class="container-fluid" style="width: 85%">
       <p>
         <h1 class="display-4" style="color: white; margin-left: 5%; padding-top: 20px;" data-aos="fade-up">Highlights</h1>
@@ -141,6 +167,10 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+    </div>
+    <!-- ///////////// Down Arrow //////////////////////////// -->
+    <div class="arrow bounce" style=" padding-top: 2%;">
+      <button class="fa fa-angle-double-down fa-4x btn btn-dark scrolldown-teamHome" style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
     </div>
   </div>
 
@@ -272,6 +302,7 @@
                   <div class="overlay rounded-circle">
                      <h2 class="blurHover" style="margin-top: 20%">Shravan Kegade</h2>
                      <h6 class="blurHover">Photography Head</h6>
+                     <a class="info" href="#team" onclick="window.open('http://linkedin.com/in/shravan-kegade-43896016b', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"> </a>
                      <!-- <a class="info" href="#">link here</a> -->
                   </div>
               </div>
@@ -302,7 +333,7 @@
                   <div class="overlay rounded-circle">
                      <h2 class="blurHover" style="margin-top: 20%">Rohan Kokkula</h2>
                      <h6 class="blurHover">Photography Head</h6>
-                     <a class="info" href="#" onclick="window.open('https://github.com/rohan0301', '_blank')"> <img src="/images/share-icons/github.png" alt="" style="width: 22%; height: 22%; margin-left: 5%"> </a>
+                     <a class="info" href="#" onclick="window.open('https://github.com/rohan0301', '_blank')"> <img src="/images/share-icons/github-white.png" alt="" style="width: 22%; height: 22%; margin-left: 5%"> </a>
                      <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/rohan-kokkula-0a8b72137/', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"></a>
                   </div>
               </div>
