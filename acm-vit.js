@@ -57,7 +57,9 @@ app.use(methodOverride('_method'));
 
 // setup mongo database for questions, comments, etc
 var url = process.env.DATABASEURL || "mongodb://localhost/ACM-VIT";
-mongoose.connect(url);
+mongoose.connect(url, { useNewUrlParser: true });
+// Handle the promise deprecation warning
+mongoose.Promise = global.Promise;
 
 
 //=====================================================================//
@@ -65,7 +67,7 @@ mongoose.connect(url);
 //=====================================================================//
 
 app.use(require('express-session')({
-  secret: "ACM_VIT-loves-technology-0246813579",
+  secret: process.env.SALTHASHSECRET,
   resave: false,
   saveUninitialized: false
 }));
