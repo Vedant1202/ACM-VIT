@@ -169,7 +169,7 @@
         // WITH LINK TO TEAM
 
         $(window).on("load", function() {
-          $(".go").click(function(e) {
+          $(".go").click(function(e) {                 // I know the variable name doesn't make sense.... But it dosen't have to in this case.
             e.preventDefault();
             scrollToElement($(this).attr("href"), 1000);
           });
