@@ -1,3 +1,4 @@
+
 <!--
     Official Website of ACM Student Chapter of Vidyalankar Institute of Technology
     Copyright (C) 2018  VEDANT NANDOSKAR
@@ -20,16 +21,18 @@
  -->
 
 
+
+
 <!-- ===================================================================== -->
                             <!-- Landing Page -->
 <!-- ===================================================================== -->
 
   <!--************** Include Header Partials ***************-->
-  <% include /app/views/partials/header.ejs %>
+  <% include \ACM-VIT\views\partials\header.ejs %>
 
   <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
 
-  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" id="home" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
     <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 12%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
       <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 55px; width: 120px; margin-top: 0px !important; margin-bottom: 0px !important;">
     </a>
@@ -38,7 +41,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active scrollup" href="#" style=" margin-left: 14%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
+      <a class="nav-item nav-link active" href="/" style=" margin-left: 14%;"><span style="font-size: 1.7em !important; background-color: rgba(0, 0, 0, 0)!important">Home</span></a>
       <a class="nav-item nav-link" href="/aboutUs" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">About</span></a>
       <a class="nav-item nav-link team go" href="#team" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Team</span></a>
       <a class="nav-item nav-link" href="/events" style=" margin-left: 12%;"><span style="font-size: 1.7em !important">Events</span></a>
@@ -60,12 +63,10 @@
 
   <!--////////////////////////////////////////////// Navbar Ends ///////////////////////////////////////////-->
 
-
   <!-- ========================================================= Stylesheet Import ================================================================================= -->
-    <link rel="stylesheet" href="/stylesheets/imagehoverMembers.css">
+    <link rel="stylesheet" href="partials/stylesheets/imagehoverMembers.css">
 
-
-
+  <!-- <div id='particles-js-home' class="particles-js-home homebase"> -->
 <!-- ////////////////////////////////////////////////////////////////////////// Typewriter effect ////////////////////////////////////////////////////////////////////////-->
 
   <div class="container" style="width: 90%; color: white; border-color: white; margin-top: 16%; text-align: center" >
@@ -80,10 +81,12 @@
 
 <!-- //////////////////////////////////////////////////////////////////////  About Us Div ////////////////////////////////////////////////////////////////////////////////-->
 
-  <div class="jumbotron" id="partialHome-1" style=" color: white; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 3% !important; margin-top: 0%; text-align: justify;">
-    <div class="container-fluid" style="width: 85%">
+  <div class="container-fluid" id="partialHome-0" style=" padding: 0;">
+  <div class="jumbotron" id="partialHome-1"  style=" width: 100%; background: linear-gradient(to right, rgba(0 ,0 ,0 ,0.6), rgba(0 ,0 ,0 ,0.2)">
+    <div class="container-fluid" style="width: 85%; color:  white;">
       <h4 class="display-4" data-aos="fade-up">About ACM</h4>
       <hr style="width: 10%; border-color: rgba(255, 255, 255, 0.6); margin-left:0px;" data-aos="fade-up">
+      <!-- <img src="/images/group-pic/group-placeholder.png" alt="" style="float: right; height: 38%; width: 38%;"> -->
       <p style="width: 60%; margin-top: 20px; line-height: 32px;">
         <span style="font-size: 20px !important" data-aos="fade-up">
           ACM brings together computing educators, researchers, and professionals to inspire dialogue, share resources, and address the field's challenges.
@@ -102,11 +105,12 @@
       <button class="fa fa-angle-double-down fa-4x btn btn-dark scrolldown-carouselHome" style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
     </div>
   </div>
+</div>
 
 
 <!-- ////////////////////////////////////////////////////////////////////// Landing Carousel Page ///////////////////////////////////////////////////////////////////////////// -->
   <div class="jumbotron" id="partialHome-2" style="background-color: rgba(0, 0, 0, 0.1); margin-bottom: 3%">
-    <div class="container-fluid" style="width: 85%">
+    <div class="container-fluid" style="width: 100%">
       <p>
         <h1 class="display-4" style="color: white; margin-left: 5%; padding-top: 20px;" data-aos="fade-up">Highlights</h1>
         <hr style="border-color: white; width: 10%; float: left; margin-left: 5%; margin-top: 0.5%" data-aos="fade-up">
@@ -114,7 +118,7 @@
       <p>
         <h3 style="color: white; float: left; margin-left: 5%; margin-bottom: 5%; margin-top: 0.5%" data-aos="fade-up">See the highlights of some of our most amazing events in the past year. <i> Excited yet?</i> </h3>
       </p>
-      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-interval='3000' data-ride="carousel"style="width: 75% !important; padding-bottom: 20px; padding-top: 0%; margin-top: 0%; margin-left: 13%" data-aos="fade-up">
+      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-interval='5000' data-ride="carousel"style="width: 75% !important; padding-bottom: 20px; padding-top: 0%; margin-top: 0%; margin-left: 13%" data-aos="fade-up">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
@@ -124,36 +128,42 @@
           <div class="carousel-item active rounded shadow-lg">
             <img class="d-block w-100" src="/images/previous-events/c-prog/cOne.png" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-              <div class="rounded shadow border" style="background-color: rgba(0, 0, 0, 0.8); border-color: white">
-                  <h3>Seminar on C Programming in IDE.</h3>
+              <div class="rounded shadow-lg border" style="background-color: rgba(0, 0, 0, 0.8); border-color: white">
+                <!-- <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); max-height: 20%; overflow: hidden;"> -->
+                  <h4>Seminar on C Programming in IDE.</h4>
                   <hr style="border-color: white; width: 95%">
                   <p style="text-align: justify;">
                     <h6>The seminar was conducted to meet the industrial standards of programming in C using IDE as C is prime language of use in the gaming and system configurations industry.</h6>
                   </p>
+                <!-- </div> -->
               </div>
             </div>
           </div>
           <div class="carousel-item rounded shadow-lg">
             <img class="d-block w-100" src="/images/previous-events/database/dbOne.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-              <div class="rounded shadow border" style="background-color: rgba(0, 0, 0, 0.8); border-color: white">
-                  <h3>Seminar on emerging database technologies.</h3>
+              <div class="rounded shadow-lg border" style="background-color: rgba(0, 0, 0, 0.8); border-color: white">
+                <!-- <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); max-height: 20%; overflow: hidden;"> -->
+                  <h4>Seminar on emerging database technologies.</h4>
                   <hr style="border-color: white; width: 95%">
                   <p style="text-align: justify;">
                     <h6>We introduced the audience to the emerging technologies in database management like Cloud computing, Big data analysis and much more.</h6>
                   </p>
+                <!-- </div> -->
               </div>
             </div>
           </div>
           <div class="carousel-item rounded shadow-lg">
             <img class="d-block w-100" src="/images/previous-events/paradigm/paradigmOne.png" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-              <div class="rounded shadow border" style="background-color: rgba(0, 0, 0, 0.8); border-color: white">
-                  <h3>Seminar on Paradigm shifts in Computer Programming.</h3>
+              <div class="rounded shadow-lg border" style="background-color: rgba(0, 0, 0, 0.8); border-color: white">
+                <!-- <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); max-height: 20%; overflow: hidden;"> -->
+                  <h4>Seminar on Paradigm shifts in Computer Programming.</h4>
                   <hr style="border-color: white; width: 95%">
                   <p style="text-align: justify;">
                     <h6>An expert talk was organised with a panel of industry leaders to discuss about the recent paradigm shifts in programming practice and their advantages.</h6>
                   </p>
+                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -174,11 +184,12 @@
     </div>
   </div>
 
+
   <!-- ////////////////////////////////////////////////////////////////////////////// TEAM ////////////////////////////////////////////////////////////////////////////// -->
 
 
-    <div class="jumbotron" id="team" style=" color: white; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 0% !important; margin-top: 0; border-width: 20px !important; text-align: justify" data-aos="fade-up">
-      <div class="container-fluid" style="width: 85%" data-aos="fade-up">
+    <div class="jumbotron" id="team" style=" color: white; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 0% !important; margin-top: 0; border-width: 20px !important; text-align: justify">
+      <div class="container-fluid" style="width: 85%">
         <h4 class="display-4" data-aos="fade-up">The Team</h4>
         <hr style="width: 10%; border-color: rgba(255, 255, 255, 0.6); margin-left:0px;" data-aos="fade-up">
         <p style=" margin-top: 20px; line-height: 28px; margin-bottom: 60px;" data-aos="fade-up">
@@ -189,12 +200,11 @@
         <p>
           <!-- //////////////////////////////////////////////////////// Team members ///////////////////////////////////////////////// -->
 
-        <!-- <div class="jumbotron rounded" style="background-color: rgba(0, 0, 0, 0.2)"> -->
-          <div class="row" align="center" style="margin-top: 3%" data-aos="fade-up">
+          <div class="row" align="center" style="margin-top: 3%">
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/sandeshaCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/sandeshaCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 style="margin-top: 20%">Sandesh Arote</h2>
                      <h6>Research & Development Head</h6>
                      <!-- <a class="info" href="#team" onclick="window.open('', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 2%"> </a> -->
@@ -203,8 +213,8 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/shubhamaCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/shubhamaCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 style="margin-top: 20%">Shubham Ambavane</h2>
                      <h6>Research & Development Head</h6>
                      <!-- <a class="info" href="#team" onclick="window.open('', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 2%"> </a> -->
@@ -213,19 +223,19 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/vedantnCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/vedantnCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Vedant Nandoskar</h2>
                      <h6 class="blurHover">Webmaster</h6>
-                     <a class="info" href="#team" onclick="window.open('https://github.com/Vedant1202', '_blank')"> <img src="/images/share-icons/github.png" alt="" style="width: 22%; height: 22%; margin-left: 5%"> </a>
+                     <a class="info" href="#" onclick="window.open('https://github.com/Vedant1202', '_blank')"> <img src="/images/share-icons/github.png" alt="" style="width: 22%; height: 22%; margin-left: 5%"> </a>
                      <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/vedant-nandoskar-692824169/', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"></a>
                   </div>
               </div>
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/saloniaCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/saloniaCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Saloni Apte</h2>
                      <h6 class="blurHover">Publicity Head</h6>
                      <!-- <a class="info" href="#">link here</a> -->
@@ -234,8 +244,8 @@
             </div>
           <div class="col" style="width: 15%">
             <div class="hovereffect rounded-circle">
-              <img class="rounded-circle profImg" src="/images/core-mem/tanvisCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-              <div class="overlay rounded-circle">
+              <img class="rounded-circle profImg" src="/images/core-mem/tanvisCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+              <div class="overlay" style="width: 100%; height: 100%; align: center">
                 <h2 class="blurHover" style="margin-top: 20%">Tanvi Sayyed</h2>
                 <h6 class="blurHover">Co-Publicity Head</h6>
                 <!-- <a class="info" href="#">link here</a> -->
@@ -243,11 +253,11 @@
             </div>
           </div>
         </div>
-          <div class="row" align="center" style="margin-top: 3%" data-aos="fade-up">
+          <div class="row" align="center" style="margin-top: 3%">
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/anujyCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/anujyCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 style="margin-top: 20%">Anuj Yadav</h2>
                      <h6>Events Head</h6>
                      <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/anuj-yadav-38ab79139/', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 2%"> </a>
@@ -256,8 +266,8 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/pravinkCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/pravinkCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Pravin Kharat</h2>
                      <h6 class="blurHover">Chairperson</h6>
                      <a class="info" href="#team" onclick="window.open('https://in.linkedin.com/in/pravin-kharat-237736156', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 2%"> </a>
@@ -266,19 +276,18 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/bhanutCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/bhanutCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Bhanu Tekwani</h2>
                      <h6 class="blurHover">Convenor</h6>
-                     <a class="info" href="#team" onclick="window.open('https://in.linkedin.com/in/bhanu-tekwani-2815b8a9', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 2%"> </a>
                      <!-- <a class="info" href="#"></a> -->
                   </div>
               </div>
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/ruchawCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/ruchawCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Rucha Walke</h2>
                      <h6 class="blurHover">Co-Chairperson</h6>
                      <!-- <a class="info" href="#">link here</a> -->
@@ -287,8 +296,8 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/sanyansCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/sanyansCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Sanyam Sharma</h2>
                      <h6 class="blurHover">General Secretary</h6>
                      <!-- <a class="info" href="#">link here</a> -->
@@ -296,11 +305,11 @@
               </div>
             </div>
           </div>
-          <div class="row" align="center" style="margin-top: 3%" data-aos="fade-up">
+          <div class="row" align="center" style="margin-top: 3%">
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/shravankCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/shravankCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Shravan Kegade</h2>
                      <h6 class="blurHover">Photography Head</h6>
                      <a class="info" href="#team" onclick="window.open('http://linkedin.com/in/shravan-kegade-43896016b', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"> </a>
@@ -310,8 +319,8 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/tanaysCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/tanaysCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Tanay Shah</h2>
                      <h6 class="blurHover">Documentation Head</h6>
                      <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/tanay-shah-95235314b/', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"> </a>
@@ -320,8 +329,8 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/surajkCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/surajkCircle.jpg" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Suraj Kewat</h2>
                      <h6 class="blurHover">Photography Head</h6>
                      <!-- <a class="info" href="#">link here</a> -->
@@ -330,28 +339,26 @@
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/rohankCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
+                <img class="rounded-circle profImg" src="/images/core-mem/rohankCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
                      <h2 class="blurHover" style="margin-top: 20%">Rohan Kokkula</h2>
                      <h6 class="blurHover">Photography Head</h6>
-                     <a class="info" href="#team" onclick="window.open('https://github.com/rohan0301', '_blank')"> <img src="/images/share-icons/github-white.png" alt="" style="width: 22%; height: 22%; margin-left: 5%"> </a>
+                     <a class="info" href="#" onclick="window.open('https://github.com/rohan0301', '_blank')"> <img src="/images/share-icons/github-white.png" alt="" style="width: 22%; height: 22%; margin-left: 5%"> </a>
                      <a class="info" href="#team" onclick="window.open('https://www.linkedin.com/in/rohan-kokkula-0a8b72137/', '_blank')"> <img src="/images/share-icons/linkedin-color.png" alt="" style="width: 30%; height: 30%; margin-left: 0%"></a>
                   </div>
               </div>
             </div>
             <div class="col" style="width: 15%">
               <div class="hovereffect rounded-circle">
-                <img class="rounded-circle profImg" src="/images/core-mem/umraansCircle.png" alt="" style="width: 100%; height: 100%; border-width: 0px;" data-aos="fade-up">
-                  <div class="overlay rounded-circle">
-                     <h2 class="blurHover" style="margin-top: 20%">Umraan Shaikh</h2>
+                <img class="rounded-circle profImg" src="/images/core-mem/profile-placeholder.png" alt="" style="width: 100%; height: 100%; border-width: 0px;">
+                  <div class="overlay" style="width: 100%; height: 100%; align: center">
+                     <h2 class="blurHover" style="margin-top: 20%">Mayuri Sadawarti</h2>
                      <h6 class="blurHover">Treasurer</h6>
                      <!-- <a class="info" href="#">link here</a> -->
                   </div>
               </div>
             </div>
           </div>
-        <!-- </div> -->
-
         </p>
       </div>
     </div>
@@ -385,8 +392,8 @@
               $(".overlay").hover(function() {
                 $(".overlay").removeClass("scaled");
                 $(this).addClass("scaled");
-              });
-            };
+              })
+            }
 
       /////////////////////////////////////// Hover ends /////////////////////////////////////////////
 
@@ -394,4 +401,4 @@
 
 
   <!--************** Include Footer Partials ***************-->
-  <% include /app/views/partials/footer.ejs %>
+  <% include \ACM-VIT\views\partials\footer.ejs %>
