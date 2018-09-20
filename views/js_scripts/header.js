@@ -136,7 +136,7 @@
         // GO DOWN
         $(".scrolldown-aboutHome").click(function() {
             $('html, body').animate({
-                scrollTop: $("#partialHome-1").offset().top
+                scrollTop: $("#partialHome-0").offset().top
             }, 1000);
         });
         $(".scrolldown-carouselHome").click(function() {

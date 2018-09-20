@@ -28,6 +28,86 @@
   <!--************** Include Header Partials ***************-->
   <% include /app/views/partials/header.ejs %>
 
+<!-- ////////////////////////////////////////////////// MODAL FOR FEEDBACK OF WEB-DEVELOPMENT ////////////////////////////////////////////////////////////// -->
+
+  <div id="myModal" class="modal shadow-lg rounded" style="background-size: cover !important; background-attachment: fixed; z-index: 100 !important;">
+    <span id="close-cursor" class="close cursor" onclick="closeModal()" style="margin-top: 7%; position: fixed; margin-right: 4%">&times;</span>
+    <div class="modal-content">
+      <div class="mySlides">
+        <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.4); color: white;">
+          <div class="container">
+            <div class="gallery-wrap rounded shadow-lg">
+              <div class="item item-1"></div>
+              <div class="item item-2"></div>
+              <div class="item item-3"></div>
+              <div class="item item-4"></div>
+              <div class="item item-5"></div>
+            </div>
+          </div>
+          <p>
+              <h4 class="display-4" style="text-align: center">Feedback by participants</h4>
+          </p>
+          <svg class="chart"></svg>
+          <p style="margin-top: 10%;">
+            <div class="row" style="width: 95%; margin-left: 4%;">
+              <div class="col-lg-9">
+                <div class="jumbotron rounded shadow-lg border" style="border-color: white; background-color: rgba(50, 50, 50, 0.6); border-width: 2px; width: 90%; text-align: center !important; padding: 1.5% !important;">
+                  <h5 style="color: white;">Comments by the participants.</h5>
+                  <hr style="width: 80%; border-color: white; opacity: 0.6">
+                  <div class="simple-ticker" id="js-ticker-roll">
+                    <ul class="comments-caro" style="height: 100px; width: 100%; color: white !important">
+                      <li class="comments-caro-elem">
+                        <h6>"We really enjoyed the session..we would like to attend machine learning and of course other IT fields too if in future conducted by ACM. Thank u for such great opportunity."</h6>
+                        <span style="float: right; font-size: 1.15em;"></span>
+                      </li>
+                      <li class="comments-caro-elem">
+                        <h6>"It was a great experience to learn the Web pages languages. In future there should be a workshop on python and machine learning."</h6>
+                        <span style="float: right; font-size: 1.15em;"></span>
+                      </li>
+                      <li class="comments-caro-elem">
+                        <h6>"Keep it up!!!"</h6>
+                        <span style="float: right; font-size: 1.15em;"></span>
+                      </li>
+                      <li class="comments-caro-elem">
+                        <h6>"Can you take workshop on App development?"</h6>
+                        <span style="float: right; font-size: 1.15em;"></span>
+                      </li>
+                      <li class="comments-caro-elem">
+                        <h6>"Keep a workshop on hadoop or big data."</h6>
+                        <span style="float: right; font-size: 1.15em;"></span>
+                      </li>
+                      <li class="comments-caro-elem">
+                        <h6>"HTML, CSS, JAVASCRIPT very important for final year projects. Thank you!"</h6>
+                        <span style="float: right; font-size: 1.15em;"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3" style=" color: white !important">
+                <div class="container rounded shadow-lg border" style="border-color: white; background-color: rgba(50, 50, 50, 0.6); border-width: 2px; padding: 20px;">
+                  <svg width="200px" height="200px" viewBox="0 0 100 100" style="color: white !important">
+                    <circle cx="50" cy="50" r="40"  style="color: white !important">
+                    </circle>
+                    <text x="50%" y="50%" text-anchor="middle" style="color: white !important"> <tspan style="color: white !important; fill: white !important">82%</tspan> </text>
+                  </svg>
+                  <p>
+                    <h6>People who voted to attend following events by ACM</h6>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- =========================================================================================================================================================================================================== -->
+                                                                                    <!-- PAGE STARTS FROM HERE -->
+<!-- ============================================================================================================================================================================================================ -->
+
 
   <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
 
@@ -79,16 +159,16 @@
       </p>
       <h4 class="display-4" data-aos="fade-up">Upcoming Events</h4>
       <hr style="width: 5%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%; margin-bottom: 4%" data-aos="fade-up">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-in" style="width: 70%; margin-left: 17%">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-in" style="width: 100%; margin-left: 0%">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-aos="fade-up">
-            <figure class="imghvr-blur" style="margin-left: 3%; width: 95%" >
-              <img class="d-block w-100" src="/images/upcoming-events/bootstrap.png" alt="Second slide" style="width: 40%; height: 35%">
+        <div class="carousel-inner" style="height: 60em;">
+          <div class="carousel-item active" data-aos="fade-up" style="height: 60em;">
+            <figure class="imghvr-blur" style="margin-left: 1.5%;">
+              <img class="d-block w-100" src="/images/upcoming-events/bootstrap.png" alt="Second slide" style="width: 150em !important; height: 60em">
             <figcaption>
               <div class="container">
                 <a href="#" onclick="window.open('https://goo.gl/forms/SW7hp07oRy5gZbc43', '_blank')"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
@@ -97,8 +177,8 @@
             </figure>
           </div>
           <div class="carousel-item" data-aos="fade-up">
-            <figure class="imghvr-blur" style="margin-left: 3%; width: 95%" >
-              <img class="d-block w-100" src="https://i.amz.mshcdn.com/Hmaq6dTgHIQjiESybHe1MsLBW9I=/fit-in/1440x0/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F319939%2F8fd805d4-b429-4268-884a-f49298a676a2.jpg" alt="First slide" style="width: 40%; height: 35%">
+            <figure class="imghvr-blur" style="margin-left: 1.5">
+              <img class="d-block w-100" src="https://i.amz.mshcdn.com/Hmaq6dTgHIQjiESybHe1MsLBW9I=/fit-in/1440x0/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F319939%2F8fd805d4-b429-4268-884a-f49298a676a2.jpg" alt="First slide" style="width: 100%; height: 60em">
               <figcaption>
                 <div class="container">
                   <a href="#"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
@@ -107,8 +187,8 @@
             </figure>
           </div>
           <div class="carousel-item" data-aos="fade-up">
-            <figure class="imghvr-blur" style="margin-left: 3%; width: 95%" >
-              <img class="d-block w-100" src="https://static.adweek.com/adweek.com-prod/wp-content/uploads/2018/08/landing-a-job-in-ad-tech1.jpg" alt="Third slide" style="width: 40%; height: 35%">
+            <figure class="imghvr-blur" style="margin-left: 1.5%" >
+              <img class="d-block w-100" src="https://static.adweek.com/adweek.com-prod/wp-content/uploads/2018/08/landing-a-job-in-ad-tech1.jpg" alt="Third slide" style="width: 100%; height: 60em">
               <figcaption>
                 <div class="container">
                   <a href="#"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
@@ -144,19 +224,85 @@
           This gives us the drive to fulfill our promise of organising such events regularly and instill a sense of exposure and overall development in the minds of those who attend.
         </h4>
       </p>
-      <div class="jumbotron shadow-lg rounded" style="background-color: rgba(0, 0, 0, 0.3)" data-aos="fade-up">
-        <div class="nine columns">
-          <div class="coverflow top10 bot10">
-            <a class="prev-arrow"></a>
-            <a class="a-slider" href=""><img src="/images/previous-events/database/dbOne.png" class="coverflow__image"/></a>
-            <a class="a-slider" href=""><img src="/images/previous-events/c-prog/cOne.png" class="coverflow__image"/></a>
-            <a class="a-slider" href=""><img src="/images/previous-events/paradigm/paradigmOne.png" class="coverflow__image"/></a>
-            <a class="a-slider" href=""><img src="/images/previous-events/glow-football/footballOne.png" class="coverflow__image"/></a>
-            <a class="a-slider" href=""><img src="/images/previous-events/paper-write/paperOne.png" class="coverflow__image"/></a>
-            <a class="next-arrow"></a>
-          </div>
-        </div>
-      </div>
+      <!-- <div class="jumbotron shadow-lg rounded" style="background-color: rgba(0, 0, 0, 0.3);" data-aos="fade-up"> -->
+            <!-- Carousel -->
+            <main role="main">
+
+            <div class="contmin">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel" style=" color: white" data-interval="5000" data-aos="fade-up">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item carousel-item-pre active">
+                    <img class="d-block w-100" src="/images/previous-events/web-dev/webOne.png" alt="Post Picture">
+                    <div class="container">
+                      <div class="carousel-caption text-left" style="margin-bottom: 4%;">
+                        <h1>Web Development Workshop</h1>
+                        <p class="text-truncate"> <h6 style="margin-bottom: 0px;">A web development hands-on workshop was conducted where the participants were trained how to handle front end as well as a backend server and thus create their own website.</h6> </p>
+                        <p>
+                          <button class="btn btn-info btn-lg" onclick="openModal();currentSlide(1)" style="margin-bottom: 1%; padding-bottom: 1%;">View Feedback</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item-pre">
+                    <img class="d-block w-100" src="/images/previous-events/database/dbOne.png" alt="Post Picture">
+                    <div class="container">
+                      <div class="carousel-caption text-left" style="margin-bottom: 4%;">
+                        <h1>Seminar on Database Management Technologies</h1>
+                        <p class="text-truncate"> <h6>A seminar was conducted on database management technologies and the lastest technologies gaining momentum in this field.</h6> </p>
+                        <!-- <p><a class="btn btn-xs btn-info btn-lg" href="#" role="button">Another Category</a></p> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item-pre">
+                    <img class="d-block w-100" src="/images/previous-events/paradigm/paradigmOne.png" alt="Post Picture">
+                    <div class="container">
+                      <div class="carousel-caption text-left" style="margin-bottom: 4%;">
+                      <h1>National seminar on paradigm shifts in Computer Programming</h1>
+                        <p class="text-truncate"> <h6>In this event, experts from the whole nation came together and discussed on the paradigm shifts in computer programming and how it will affect the future of computers.</h6> </p>
+                        <!-- <p><a class="btn btn-xs btn-info btn-lg" href="#" role="button">Diff Cat</a></p> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item-pre">
+                    <img class="d-block w-100" src="/images/previous-events/c-prog/cOne.png" alt="Post Picture">
+                    <div class="container">
+                      <div class="carousel-caption text-left" style="margin-bottom: 4%;">
+                        <h1>Programming in C using IDE</h1>
+                        <p class="text-truncate"> <h6>An hands-on session was conducted on how to program in an IDE like Visual Studio as an IDE is the industry standard for programming.</h6> </p>
+                        <!-- <p><a class="btn btn-xs btn-info btn-lg" href="#" role="button">Hopefully Last</a></p> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item-pre">
+                    <img class="d-block w-100" src="/images/previous-events/paper-write/paperOne.png" alt="">
+                    <div class="container">
+                      <div class="carousel-caption text-left" style="margin-bottom: 4%;">
+                        <h1>Seminar on Paper Writing</h1>
+                        <p class="text-truncate"> <h6>A seminar was conducted on how to write and publish technical papers and how to make the most out of them was explained.</h6> </p>
+                        <!-- <p><a class="btn btn-xs btn-info btn-lg" href="#" role="button">Last Cat</a></p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <!-- Carousel ends here -->
+      <!-- </div> -->
     </div>
   </div>
 
