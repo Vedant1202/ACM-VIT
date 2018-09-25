@@ -31,7 +31,8 @@
 <!-- ////////////////////////////////////////////////// MODAL FOR FEEDBACK OF WEB-DEVELOPMENT ////////////////////////////////////////////////////////////// -->
 
   <div id="myModal" class="modal shadow-lg rounded" style="background-size: cover !important; background-attachment: fixed; z-index: 100 !important;">
-    <span id="close-cursor" class="close cursor" onclick="closeModal()" style="margin-top: 7%; position: fixed; margin-right: 4%">&times;</span>
+    <span id="close-cursor" class="close cursor" onclick="closeModal()" style="margin-top: 5%; position: fixed; margin-right: 3%">&times;</span>
+    <!-- <span class="close cursor" onclick="closeModal()" style="position: fixed; margin-top: 0%; padding-top: 2px; margin-right: 0%; padding-right: 2px; margin-bottom: 2px; padding-bottom: 2px;">&times;</span> -->
     <div class="modal-content">
       <div class="mySlides">
         <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.4); color: white;">
@@ -111,7 +112,7 @@
 
   <!-- /////////////////////////////////////////////// Navbar //////////////////////////////////////////////-->
 
-  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
+  <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top" id="#navbarMain" style="margin-top: 0px; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.03)); padding: 0 !important;">
     <a class="navbar-brand" href="/" style="margin-right: 0%; margin-left: 12%; width: 12%; margin-top: 0px !important; margin-bottom: 0px !important;">
       <img src="/images/logo/ACM_Logo-edit.png" class="border img-thumbnail" style="height: 55px; width: 120px; margin-top: 0px !important; margin-bottom: 0px !important;">
     </a>
@@ -144,6 +145,8 @@
 
   <link rel="stylesheet" href="/stylesheets/events.css">
   <link rel="stylesheet" href="/stylesheets/imagehover.css">
+  <link rel="stylesheet" href="/stylesheets/java.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
 
   <!-- ////////////////////////////Email Us?///////////////////////// -->
@@ -159,24 +162,25 @@
       </p>
       <h4 class="display-4" data-aos="fade-up">Upcoming Events</h4>
       <hr style="width: 5%; border-color: rgba(255, 255, 255, 0.6); margin-left: 1%; margin-bottom: 4%" data-aos="fade-up">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-in" style="width: 100%; margin-left: 0%">
-        <ol class="carousel-indicators">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-in" style="width: 90%; margin-left: 5%">
+        <!-- <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+        </ol> -->
         <div class="carousel-inner" style="height: 60em;">
           <div class="carousel-item active" data-aos="fade-up" style="height: 60em;">
             <figure class="imghvr-blur" style="margin-left: 1.5%;">
-              <img class="d-block w-100" src="/images/upcoming-events/bootstrap.png" alt="Second slide" style="width: 150em !important; height: 60em">
+              <img class="d-block w-100" src="/images/upcoming-events/java-dev.png" alt="Second slide" style="width: 150em !important; height: 60em">
             <figcaption>
               <div class="container">
-                <a href="#" onclick="window.open('https://goo.gl/forms/SW7hp07oRy5gZbc43', '_blank')"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
+                <!-- <a href="#" onclick="window.open('https://goo.gl/forms/SW7hp07oRy5gZbc43', '_blank')"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a> -->
+                <a class="btn-green-flat-trigger" href="#formTopJava" id="modal-register-java" style="width: 120px !important; height: 50px !important;position: absolute; left: 45%; top: 50%;">Register</a>
               </div>
               </figcaption>
             </figure>
           </div>
-          <div class="carousel-item" data-aos="fade-up">
+          <!-- <div class="carousel-item" data-aos="fade-up">
             <figure class="imghvr-blur" style="margin-left: 1.5">
               <img class="d-block w-100" src="https://i.amz.mshcdn.com/Hmaq6dTgHIQjiESybHe1MsLBW9I=/fit-in/1440x0/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F319939%2F8fd805d4-b429-4268-884a-f49298a676a2.jpg" alt="First slide" style="width: 100%; height: 60em">
               <figcaption>
@@ -195,21 +199,21 @@
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </div> -->
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </a> -->
       </div>
     </div>
     <!-- ///////////// Down Arrow //////////////////////////// -->
     <div class="arrow bounce" style=" padding-top: 2%;">
-      <button class="fa fa-angle-double-down fa-4x btn btn-dark scrolldown-prevEvents" style="background-color: rgba(0, 0, 0, 0.1); border-width: 0"></button>
+      <button class="btn btn-dark scrolldown-prevEvents" style="background-color: rgba(0, 0, 0, 0.1); border-width: 0; width: 50px; height: 50px;"> <img src="/images/arrow-down.png" style="height: 70%; width: 100%;" alt=""> </button>
     </div>
   </div>
 
@@ -307,9 +311,136 @@
   </div>
 
 
+<!-- ======================================================================================================================================================================== -->
+<!-- ======================================================================================================================================================================== -->
+
+<!-- Java register events
+-->
+
+<div class="global-modal">
+ <div class="overlay"></div>
+ <div class="global-modal_contents modal-transition">
+  <div class="global-modal-header" id="formTopJava">
+    <span class="mobile-close" style="color: black;"> X </span>
+    <!-- /////////////////////////////////////////// -->
+  </div>
+  <div class="global-modal-body" style="color: white">
+    <h3 class="display-4" style="padding-top: 3%; text-align: center">Register</h3>
+    <hr style="width: 80%; border-color: white">
+    <div class="subscribe-container">
+      <!-- Begin MailChimp Signup Form -->
+      <div class="mc_embed_signup">
+        <!-- <h3>Get my best stuff straight to your inbox.</h3> -->
+        <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                </div>
+              <input type="text" value="" placeholder="Full name" name="name" class="required form-control" id="mce-FNAME">
+            </div>
+            <div class="mc-field-group">
+              <div  style="text-align: left !important">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+              </div>
+              <input type="email" placeholder="Email address" name="email" class="required email" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+              </div>
+              <input type="number" placeholder="Mobile number" name="phoneno" class="required form-control" id="phone-no">
+            </div>
+            <div class="mc-field-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user-graduate"></i></span>
+              </div>
+              <input type="text" placeholder="Roll number" name="rollno" class="required form-control" id="roll-no">
+            </div>
+            <div class="row">
+              <div class="mc-field-group col-md-4" style="margin-top: 4%; margin-bottom: 6%;">
+                <div  style="text-align: left !important; margin-bottom: 5%;">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-graduation-cap"></i></span>
+                    </div>
+                </div>
+                <!-- <input type="email" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL"> -->
+                <div style="text-align: left" class="form-group" style="padding-top: 20%;">
+                  <input required type="radio" id="y1" name="year" class="radio_input" value="FE" style="margin-bottom: 4%;"/>FE</br>
+                  <input required type="radio" id="y2" name="year" class="radio_input" value="SE" style="margin-bottom: 4%;"/>SE</br>
+                  <input required type="radio" id="y3" name="year" class="radio_input" value="TE" style="margin-bottom: 4%;"/>TE</br>
+                  <input required type="radio" id="y4" name="year" class="radio_input" value="BE" style="margin-bottom: 4%;"/>BE</br>
+                </div>
+              </div>
+              <div class="mc-field-group col-md-4" style="margin-top: 4%; margin-bottom: 6%;">
+                <div  style="text-align: left !important; margin-bottom: 5%;">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-code-branch"></i></span>
+                    </div>
+                </div>
+                <!-- <input type="email" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL"> -->
+                <div style="text-align: left" class="form-group" style="padding-top: 20%;">
+                  <input required type="radio" id="b1" name="branch" class="radio_input" value="CMPN" style="margin-bottom: 4%;"/>CMPN</br>
+                  <input required type="radio" id="b2" name="branch" class="radio_input" value="INFT" style="margin-bottom: 4%;"/>INFT</br>
+                  <input required type="radio" id="b3" name="branch" class="radio_input" value="EXTC" style="margin-bottom: 4%;"/>EXTC</br>
+                  <input required type="radio" id="b4" name="branch" class="radio_input" value="ETRX" style="margin-bottom: 4%;"/>ETRX</br>
+                  <input required type="radio" id="b5" name="branch" class="radio_input" value="BIOMED" style="margin-bottom: 4%;"/>BIOMED</br>
+                </div>
+              </div>
+              <div class="mc-field-group col-md-4" style="margin-top: 4%; margin-bottom: 6%;">
+                <div  style="text-align: left !important; margin-bottom: 5%;">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-pen-fancy"></i></span>
+                    </div>
+                </div>
+                <!-- <input type="email" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL"> -->
+                <div style="text-align: left" class="form-group" style="padding-top: 20%;">
+                  <input required type="radio" id="d1" name="division" class="radio_input" value="A" style="margin-bottom: 4%;"/>A</br>
+                  <input required type="radio" id="d2" name="division" class="radio_input" value="B" style="margin-bottom: 4%;"/>B</br>
+                  <input required type="radio" id="d3" name="division" class="radio_input" value="C" style="margin-bottom: 4%;"/>C</br>
+                </div>
+              </div>
+            </div>
+            <p class="error-message-email">Please provide a valid email address.</p>
+            <p class="error-message-phone">Please provide a valid mobile number.</p>
+            <p class="error-message-rollno">Please provide a valid Roll number.</p>
+            <p class="error-message">Please fill out the fields above.</p>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d6c6ce7da87357b90e9859e81_2091bdd722" tabindex="-1" value=""></div>
+            <div class="clear">
+              <a href="#navbarMain">
+                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="cta-btn" onclick="#navbarMain">
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+      <div class="success-message">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" width="70">
+              <circle class="checkmark-circle" cx="26" cy="26" r="23" fill="none"/>
+              <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <div>
+          <h4>Success!</h4>
+          <p>Thank you! You have been registered. See you at the event!</p>
+        </div>
+      </div>
+    </div>
+   </div>
+ </div>
+</div>
+
+<!-- ========================================================================================================================================================================= -->
+
+
 
   <!-- ////////////////////Import JS File/////////////////////////// -->
   <script type="text/javascript" src="/js_scripts/events.js"></script>
+
+  <!-- ////////////////////Import JS File/////////////////////////// -->
+<script type="text/javascript" src="/js_scripts/java.js"></script>
 
   <!--************** Include Footer Partials ***************-->
   <% include /app/views/partials/footer.ejs %>

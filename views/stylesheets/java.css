@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+/* Change placeholder text inside inputs */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #d7d7d7;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d7d7d7;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #d7d7d7;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d7d7d7;
+}
+
+body {
+  /* font-family: 'Open Sans', Arial, sans-serif; */
+  /* font-size: 16px; */
+}
+
+h3 {
+  /* font-weight: bold; */
+  /* font-size: 1.5rem; */
+  text-align: center;
+  color: white;
+}
+
+h4 {
+  /* font-size: 1.2rem; */
+  color: white;
+}
+
+.radio_input{
+  font-size: 18px !important;
+}
+
+.subscribe-container {
+  text-align: center;
+  margin: 2em auto;
+  padding: 1em;
+  width: 75%;
+  /* max-width: 320px; */
+}
+
+.mc_embed_signup input.required {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+  margin: 20px 0;
+  padding: 5px 20px 5px 10px;
+  outline: none;
+  width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.mc_embed_signup input.required.error {
+    border-bottom: 1px solid #eb2344;
+}
+
+.mc_embed_signup input#mc-embedded-subscribe {
+  background: #3a74cb;
+  font-size: .8rem;
+  color: #fff;
+  border-radius: 40px;
+  padding: 12px 35px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 40%;
+  margin-bottom: 4em;
+  display: block;
+  transition: 0.2s ease background;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.mc_embed_signup input#mc-embedded-subscribe:hover {
+  background: #144183;
+}
+
+/* Show focus state for power users that use 'TAB' to switch fields */
+.mc_embed_signup input#mc-embedded-subscribe:focus {
+  background: #144183;
+}
+
+.error-message {
+  display: none;
+  color: red;
+  text-align: center;
+  font-size: .8em;
+}
+
+.error-message-email {
+  display: none;
+  color: red;
+  text-align: center;
+  font-size: .8em;
+}
+
+.error-message-phone {
+  display: none;
+  color: red;
+  text-align: center;
+  font-size: .8em;
+}
+
+.error-message-rollno {
+  display: none;
+  color: red;
+  text-align: center;
+  font-size: .8em;
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+}
+
+.success-message > div {
+  width: 100%;
+  opacity: 0;
+  animation: reveal 1s 1s forwards;
+  text-align: center;
+}
+/* Appear animation for success message */
+@keyframes reveal {
+  0%, 75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 'SUCCESS!' check animation */
+svg.checkmark {
+  width: 75px;
+  height: 75px;
+  margin: 2em auto;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: #3a74cb;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  transition: 1s all ease;
+}
+
+/* Trigger animation we add 'active' class via JS */
+svg.checkmark.active {
+  animation: moveupwards 1s 1s forwards;
+}
+
+/* 'Move upwards' animation below, no need for absolutely positioned
+          elements or transform: translate. We'll create the subtle 'moving up'
+          effect by playing with margins and size. Responsive friendly! */
+@keyframes moveupwards {
+  0%, 75% {
+    width: 75px;
+    height: 75px;
+    margin: 2em auto;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+    margin: 1em auto;
+  }
+}
+
+/* Paths inside SVG. Each path will be animated using stroke property
+          and 'stroke' animation */
+svg > .checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke: #138400;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+svg > .checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-width: 3;
+  stroke-dashoffset: 48;
+  stroke: #138400;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Sorry IE and Edge users, no SVG animations supported for you,
+        so we'll hide our SVG to prevent empty space gap */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .success-message svg {
+    display: none;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .success-message svg {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+* {
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; */
+}
+html,
+body {
+  /* width: 100%; */
+}
+
+a {
+  /* color: #D4341A;
+  text-decoration: none; */
+}
+
+.center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.credit {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+}
+.btn-green-flat-trigger{
+  border: 1px solid #085dcc;
+  background: #085dcc;
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  padding: 10px 25px;
+  border-radius: 4px;
+  /* cursor: pointer; */
+}
+.btn-green-flat-trigger:hover{
+  text-decoration: none;
+  color: #fff;
+  background: #023372;
+  transition: background 0.5s ease,
+              padding 0.8s linear;
+}
+
+
+.btn-green-flat {
+  border: 1px solid #47BA6B;
+  background: rgba(0, 0, 0, 0);
+  /* font-size: 20px; */
+  color: #47BA6B;
+  /* font-weight: 200; */
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+}
+.btn-green-flat:hover{
+  text-decoration: none;
+  color: #fff;
+  background: #47ba6b;
+  transition: background 0.2s ease,
+              padding 0.8s linear;
+
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.77);
+  position: fixed;
+  z-index: 500;
+  background-size: cover;
+  background-attachment: fixed;
+  /* overflow: hidden; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.global-modal {
+  visibility: hidden;
+}
+
+.global-modal_contents {
+  background-color: rgba(20, 20, 20, 0.8);
+  -webkit-box-shadow: 0 0 8px 2px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 0 8px 2px rgba(182,182,182, 0.75);
+  -o-box-shadow: 0 0 8px 2px rgba(182,182,182,0.75);
+  box-shadow: 0 0 8px 2px rgba(182, 182, 182, 0.75);
+  width: 50%;
+  position: absolute;
+  left: 42%;
+  margin-left: -16%;
+  top: 15%;
+  min-height: 450px;
+  z-index: 1000;
+}
+.global-modal-header{
+  border-bottom: 1px solid #ccc;
+}
+.global-modal-header h3{
+  color: #34495E;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+.global-modal-header .mobile-close{
+  display: none;
+}
+.global-modal-header span{
+  font-weight: 200;
+}
+.global-modal-body{
+  width: 100%;
+}
+.global-modal-body p{
+  /* color: #34495E; */
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+}
+.global-modal-body .content-left {
+  height: 225px;
+  width: 50%;
+  position: relative;
+  top: 55px;
+  float: left;
+  border-right: 1px solid #CCC;
+}
+
+.global-modal-body .content-right{
+  height: 225px;
+  width: 50%;
+  position: relative;
+  top: 55px;
+  float: left;
+}
+.content-right .sponsor-name{
+  font-weight: bold;
+  color: #000;
+}
+.global-modal_contents h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 32rem;
+  text-align: center;
+  display: block;
+}
+
+.global-modal_close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  text-decoration: none;
+  display: none;
+}
+
+.global-modal-show {
+  visibility: visible;
+}
+
+.global-modal-transition {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.global-modal-show .global-modal-transition {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media (max-width: 1139px){
+  .global-modal p{
+    text-align: center;
+  }
+  .global-modal:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  .global-modal-body .content-left{
+    width: 80%;
+    display:block;
+    float: none;
+    margin: 0 auto;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+}
+  .global-modal-body .content-right{
+    width: 80%;
+    display: block;
+    margin: 40px auto;
+    float: none;
+    border-right: none;
+  }
+}
+@media(max-width: 1027px){
+  .global-modal-header h3{
+    font-size: 18px;
+  }
+}
+@media (max-width : 767px) {
+
+  .global-modal_contents {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .global-modal-header h3{
+    font-size: 22px;
+  }
+  .global-modal-header .mobile-close{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    curson: pointer;
+  }
+  .global-modal_close {
+    display: block;
+  }
+
+  .global-modal-transition {
+    -webkit-transform: translateX(-0) translateY(150%);
+    -moz-transform: translateX(-0) translateY(150%);
+    -ms-transform: translateX(-0) translateY(150%);
+    transform: translateX(-0) translateY(150%);
+  }
+
+}
+@media (max-width: 495px){
+  .global-modal-header h3{
+    /* font-size: 18px; */
+  }
+}
+@media (max-width: 415px){
+  .global-modal-header h3{
+    /* font-size: 15px; */
+  }
+}
