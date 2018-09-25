@@ -42,6 +42,7 @@ var express             = require('express'),
     passport            = require('passport'),
     LocalStrategy       = require('passport-local'),
     admin               = require('./models/admin.js'),
+    javareg             = require('./models/java_reg.js'),
     router              = express.Router();
 
 
@@ -50,13 +51,14 @@ app.set('view engine', 'ejs');
 
 // setup bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 //setup express
 app.use(express.static('/app/views'));
 app.use(methodOverride('_method'));
 
 // setup mongo database for questions, comments, etc
-var url = process.env.DATABASEURL || "mongodb://localhost/ACM-VIT";
+var url = process.env.DATABASEURL;
 mongoose.connect(url, { useNewUrlParser: true });
 // Handle the promise deprecation warning
 mongoose.Promise = global.Promise;
@@ -102,10 +104,33 @@ app.get('/pics', function (req, res) {
   res.render('circlePics');
 });
 
-//Events page
+//--------------------------Events page--------------------------//
 app.get('/events', function (req, res) {
   res.render('events');
 });
+//Post to Db for java event page
+app.post('/events', function (req, res) {
+  var javarreg = {
+    name: req.body.name,
+    email: req.body.email,
+    phoneno: req.body.phoneno,
+    rollno: req.body.rollno,
+    year:  req.body.year,
+    branch:  req.body.branch,
+    division:  req.body.division
+  }
+  // console.log(javarreg);
+  //Create a new post and save to Db
+  javareg.create(javarreg, function (err, newreg) {
+    if(err){
+      console.log(err);
+    } else {
+      console.log("Registered succesfully");
+      console.log(newreg);
+    }
+  });
+});
+
 
 
 //-------------------Contact Us page------------------------//
