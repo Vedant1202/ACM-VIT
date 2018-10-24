@@ -104,6 +104,12 @@
   </div>
 </div>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<% include /app/views/partials/javaFeedbackModal.ejs %>
+
+
+
 
 <!-- =========================================================================================================================================================================================================== -->
                                                                                     <!-- PAGE STARTS FROM HERE -->
@@ -171,11 +177,13 @@
         <div class="carousel-inner" style="height: 60em;">
           <div class="carousel-item active" data-aos="fade-up" style="height: 60em;">
             <figure class="imghvr-blur" style="margin-left: 1.5%;">
-              <img class="d-block w-100" src="/images/upcoming-events/java-dev.png" alt="Second slide" style="width: 150em !important; height: 60em">
+              <img class="d-block w-100" src="/images/upcoming-events/web-host.png" alt="Second slide" style="width: 150em !important; height: 60em">
             <figcaption>
               <div class="container">
-                <!-- <a href="#" onclick="window.open('https://goo.gl/forms/SW7hp07oRy5gZbc43', '_blank')"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a> -->
-                <a class="btn-green-flat-trigger" href="#formTopJava" id="modal-register-java" style="width: 120px !important; height: 50px !important;position: absolute; left: 45%; top: 50%;">Register</a>
+                <a href="#"><button type="button" class="web-host-closed btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a>
+                <!-- <a href="#" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdIBYAsZG8il3xHfdsHVqBLM5J0lOs5goMKbsWbyhW5pVA73Q/viewform', '_blank')"><button type="button" class="btn btn-primary btn-lg shadow-lg" style="position: absolute; left: 45%; top: 50%;">Register</button></a> -->
+                <!-- <a class="btn-green-flat-trigger" href="#formTopJava" id="modal-register-java" style="width: 120px !important; height: 50px !important;position: absolute; left: 45%; top: 50%;">Register</a> -->
+                <!-- <a class="btn btn-primary" href="#" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdIBYAsZG8il3xHfdsHVqBLM5J0lOs5goMKbsWbyhW5pVA73Q/viewform', '_blank')" id="modal-closed-java" style="width: 180px !important; height: 50px !important;position: absolute; left: 40%; top: 50%;">Register</a> -->
               </div>
               </figcaption>
             </figure>
@@ -240,9 +248,22 @@
                   <li data-target="#myCarousel" data-slide-to="2"></li>
                   <li data-target="#myCarousel" data-slide-to="3"></li>
                   <li data-target="#myCarousel" data-slide-to="4"></li>
+                  <li data-target="#myCarousel" data-slide-to="5"></li>
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item carousel-item-pre active">
+                    <img class="d-block w-100" src="/images/previous-events/java-dev/java-dev.png" alt="Post Picture">
+                    <div class="container">
+                      <div class="carousel-caption text-left" style="margin-bottom: 5%;">
+                        <h1>Java Application Development Workshop</h1>
+                        <p class="text-truncate"><h6 style="margin-bottom: 0px;">A hands-on session was conducted by acm for students to create GUI based Java applications using AWT and Swings. Also the students were taught and encouraged to use Netbeans IDE for their development purposes.</h6></p>
+                        <p>
+                          <button class="btn btn-info btn-lg" onclick="openModalJava();currentSlide(1)">View Feedback</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item-pre">
                     <img class="d-block w-100" src="/images/previous-events/web-dev/webOne.png" alt="Post Picture">
                     <div class="container">
                       <div class="carousel-caption text-left" style="margin-bottom: 4%;">
@@ -342,7 +363,7 @@
             <div class="mc-field-group">
               <div  style="text-align: left !important">
                 <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
                   </div>
               </div>
               <input type="email" placeholder="Email address" name="email" class="required email" id="mce-EMAIL">
@@ -434,6 +455,15 @@
 
 <!-- ========================================================================================================================================================================= -->
 
+
+  <script type="text/javascript">
+    $("#modal-closed-java").click(function () {
+      alert("Registrations for this event are closed now");
+    });
+    $(".web-host-closed").click(function () {
+      alert("Registrations for this event are closed now");
+    });
+  </script>
 
 
   <!-- ////////////////////Import JS File/////////////////////////// -->
