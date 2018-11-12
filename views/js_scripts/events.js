@@ -630,6 +630,14 @@
         function closeModal() {
           document.getElementById('myModal').style.display = "none";
         }
+        function openModalJava() {
+          document.getElementById('myModal-java').style.display = "block";
+          // document.getElementById('myModal').style.backgroundsize = "cover";
+        }
+
+        function closeModalJava() {
+          document.getElementById('myModal-java').style.display = "none";
+        }
 
         var slideIndex = 1;
         showSlides(slideIndex);

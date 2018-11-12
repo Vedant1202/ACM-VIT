@@ -7,7 +7,7 @@ $("#modal-register-java").click(function() {
   $(".mc_embed_signup > form").submit(function(e) {
     e.preventDefault(); // Prevent a new window from opening upon clicking 'Subscribe now' button
 
-
+    var c = 0;
     var validForm = true; // Set initial state of valid form to true
     var inputArray = $(this).find("input.required"); // Find all required inputs and store them in array
 
@@ -41,6 +41,7 @@ $("#modal-register-java").click(function() {
       }
       else {
         validForm = true;
+        c++;
         $(".mc_embed_signup .error-message-email").hide(); // if empty, show error message
         $('.mc_embed_signup input#mce-EMAIL').removeClass('error'); // and highlight empty inputs
       }
@@ -60,6 +61,7 @@ $("#modal-register-java").click(function() {
       }
       else {
         validForm = true;
+        c++;
         $(".mc_embed_signup .error-message-phone").hide(); // if empty, show error message
         $('.mc_embed_signup input#phone-no').removeClass('error'); // and highlight empty input
       }
@@ -78,6 +80,7 @@ $("#modal-register-java").click(function() {
       }
       else {
         validForm = true;
+        c++;
         $(".mc_embed_signup .error-message-rollno").hide(); // if empty, show error message
         $('.mc_embed_signup input#roll-no').removeClass('error'); // and highlight empty input
       }
@@ -90,7 +93,7 @@ $("#modal-register-java").click(function() {
 
 
     // Everything checks out! Continue...
-    if (validForm == true) {
+    if (validForm == true && c==3) {
       var formContainer = $(".mc_embed_signup");
       // var formData = $(this).serialize(); // Format all info and get it ready for sendoff
       // console.log(JSON.stringify(formData));
